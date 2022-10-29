@@ -1,0 +1,23 @@
+package com.test2;
+class A{
+	int a;
+	A() {
+		a = 100;
+	}
+	{System.out.println(a);}
+}
+A(int a){
+	this.a = a;
+	System.out.println(a);
+}
+
+class B extends A {
+	
+}
+public class Test1 {
+
+	public static void main(String[] args) {
+
+	}
+
+}

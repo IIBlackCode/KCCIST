@@ -1,0 +1,28 @@
+package com.test5;
+class A {
+	int a
+	A() {
+		a = 100;
+		System.out.println("Default A Constructor");
+	} //super 내가 원하는 상태를 호출하고 싶을때 
+}
+class B extends A {
+	B() {
+		System.out.println("Default B Constructor");
+	}
+	B(int b) {
+		this.b = b;
+		System.out.println(b);
+	}
+}
+void bMethod)() {System.out.println(a);}
+
+
+public class Test1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

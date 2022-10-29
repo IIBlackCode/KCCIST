@@ -1,0 +1,23 @@
+package com.test5;
+class A {
+	A() {
+		a = 100;
+		System.out.println("Default A Constructor");
+	}
+}
+class B extends A {
+	B() {
+		System.out.println("Default B Constructor");
+	}
+}
+void bMethod)() {System.out.println(a);}
+
+
+public class Test1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

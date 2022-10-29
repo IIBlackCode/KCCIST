@@ -1,0 +1,11 @@
+package zoo;
+
+public class Cat {
+public void makeSoun() {
+	System.out.println("Cat")
+}
+void makeHappy() {
+	System.out.println("makeHappy");
+}
+	}
+

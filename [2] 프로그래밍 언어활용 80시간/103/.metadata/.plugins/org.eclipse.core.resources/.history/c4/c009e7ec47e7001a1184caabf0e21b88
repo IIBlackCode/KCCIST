@@ -1,0 +1,22 @@
+package com.test;
+
+class Student2 {
+	private String name;
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+}
+
+public class Test8 {
+
+	public static void main(String[] args) {
+		Student2[] stus = new Student2[2];
+stus[0].setName("ȫ�浿");
+	}
+
+}

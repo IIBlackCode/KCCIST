@@ -1,0 +1,17 @@
+package com.test;
+
+class MyClass {
+	static int a = 0;
+int a = 0;
+public MyClass() {
+	a++;
+	System.out.println(a);
+}
+}
+public class Test1 {
+	public static void main(String[] args) {
+		MyClass c = new MyClass();
+		c.a
+		MyClass c2 = new MyClass();
+	}
+}

@@ -1,0 +1,13 @@
+class Employee{
+	public Employee() {}
+	public String name;
+}
+public class Test8 {
+
+	public static void main(String[] args) {
+Employee emp = new Employee();
+
+
+	}
+
+}

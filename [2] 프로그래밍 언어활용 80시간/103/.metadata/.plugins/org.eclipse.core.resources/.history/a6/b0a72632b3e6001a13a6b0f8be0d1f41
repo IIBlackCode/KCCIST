@@ -1,0 +1,7 @@
+package Study;
+
+public class StudyStart {
+	public static void main(String[] args) {
+		
+	}
+}

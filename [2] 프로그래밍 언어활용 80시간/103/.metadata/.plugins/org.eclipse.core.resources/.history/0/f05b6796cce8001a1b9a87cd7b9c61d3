@@ -1,0 +1,20 @@
+package com.test5;
+
+class A {
+void testMethod() {System.out.println("A");}
+}
+
+class B extends A {
+
+}
+
+class C extends B {
+
+}
+
+public class Test1 {
+	public static void main(String[] args) {
+
+	}
+
+}

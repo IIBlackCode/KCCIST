@@ -1,0 +1,20 @@
+package com.test;
+
+class Animal3 {
+	void eat() {
+	}
+}
+
+class Dog3 extends Animal3 {
+	void bark() {
+	}
+}
+
+public class Test10 {
+	public static void main(String[] args) {
+		Dog3 d = new Dog3();
+		d.bark(); d.eat();
+		Animal3 a = d;
+	}
+
+}

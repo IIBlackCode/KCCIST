@@ -1,0 +1,21 @@
+package com.test;
+
+class Box {
+	private String conts;
+
+	Box(String cont) {
+		this.conts = cont;
+	}
+
+	public String toString() {
+		Box[]
+				}
+}
+
+public class BoxArray {
+
+	public static void main(String[] args) {
+
+	}
+
+}

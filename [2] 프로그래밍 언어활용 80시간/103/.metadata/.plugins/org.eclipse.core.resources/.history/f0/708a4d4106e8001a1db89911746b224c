@@ -1,0 +1,20 @@
+package com.test;
+
+public class Test4 {
+public static void main(String[] args) {
+	int a  = 0;
+			int b = 0;
+			if(a ==b) {
+				System.out.println("O.K");
+			}
+			String s = new String("A");
+			String s2 = new Stiring("A');"
+				if( s==s2)
+			
+	}
+String s3 = s;
+if(s==s3) {
+	System.out.println("O.K3");
+}
+
+}

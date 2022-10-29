@@ -1,0 +1,35 @@
+package com.test;
+
+class Database {
+	void poen() {
+		System.out.println("Database Open");
+	}
+}
+
+class Oracle extends Database {
+	void select() {
+		System.out.println("Oracle Select");
+	}
+}
+
+class MySql extends Database {
+	void mysqlSelect() {
+		System.out.println("MySql Select");
+	}
+}
+
+public class Test9 {
+	public static void main(String[] args) {
+		Oracle o = new Oracle();
+		o.open();
+		o.select();
+		Database d = o;
+		d.open();
+		Oracle o2 = (Oracle) d;
+		o2.open(); o2.oracleSelect();
+		MySql m = new MySql();
+				m.open(); m.mysqlSelect();
+				Database d2 = m;
+				MySql m2 = (MySql)d2;
+	}
+}

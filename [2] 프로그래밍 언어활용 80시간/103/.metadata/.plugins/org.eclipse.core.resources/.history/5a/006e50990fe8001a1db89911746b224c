@@ -1,0 +1,12 @@
+package com.test;
+Claaa A {
+	A() { System.out.println("Default A Constructor")
+}
+public class Test7 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

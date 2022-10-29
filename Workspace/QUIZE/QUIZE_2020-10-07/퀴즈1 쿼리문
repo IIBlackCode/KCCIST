@@ -1,0 +1,56 @@
+--퀴즈 1. [사원/급여 테이블]설계
+--	 	사번, 이름, 직급, 부서, 연락처, 연도, 월, 월급, 세금, 보너스, 계좌번호
+
+
+
+-- 	테이블 만들고 2명직원의 각 3건 급여 입력 후 조회
+--		입력된 데이터를 조회하는 Python 코드를 작성한다.
+CREATE DATABASE company;
+USE company;
+
+--사원 테이블: 사번[PK], 이름, 직급, 부서, 연락처
+DROP TABLE emp;
+CREATE TABLE emp (
+	emp_num	SMALLINT PRIMARY KEY,	#사번
+	emp_name	CHAR(5)	NOT NULL,		#이름
+	emp_rank	CHAR(5) 	NOT NULL,		#직급
+	emp_dep	CHAR(10)	NOT NULL,		#부서
+	emp_tel	INT		NULL,				#연락처
+	emp_account INT	NOT NULL		#계좌번호
+);
+
+--급여 테이블: 급여 코드[PK],사번[FK], 연도, 월, 월급, 세금, 보너스, 계좌번호
+DROP TABLE sal;
+CREATE TABLE sal (
+	sal_code		INT		PRIMARY KEY,	#급여코드
+	empcode		SMALLINT NOT NULL,		#사번
+	sal_year		SMALLINT NOT NULL,		#연도
+	sal_month 	CHAR(2)	NOT NULL,		#월
+	salary		INT		NOT NULL,		#월급
+	sal_tax		INT		NOT NULL,		#세금
+	sal_bonus	INT		NULL,				#보너스
+	FOREIGN KEY(empcode) REFERENCES emp(emp_num)
+);
+
+
+--사원 테이블: 사번[PK], 이름, 직급, 부서, 연락처
+--급여 테이블: 급여 코드[PK],사번[FK], 연도, 월, 월급, 세금, 보너스, 계좌번호
+-- 	테이블 만들고 2명직원의 각 3건 급여 입력 후 조회
+
+INSERT INTO emp VALUES(1, '이승기', '대리', '개발부서',01011111111,11111111);
+INSERT INTO emp VALUES(2, '박준석', '팀장', '영업부서',01022222222,22222222);
+
+INSERT INTO sal VALUES(1, 1, 2020,'1월',2000000,100000,0);
+INSERT INTO sal VALUES(2, 1, 2020,'2월',1900000,90000,0);
+INSERT INTO sal VALUES(3, 1, 2020,'3월',2100000,110000,30);
+
+INSERT INTO sal VALUES(4, 2, 2020,'6월',5000000,500000,1000000);
+INSERT INTO sal VALUES(5, 2, 2020,'7월',5100000,510000,1000000);
+INSERT INTO sal VALUES(6, 2, 2020,'8월',5200000,520000,1000000);
+
+SELECT * FROM emp a, sal b
+WHERE a.emp_num = b.empcode;
+
+
+
+--3. 입력된 데이터 조회하는 Python 코드를 작성한다.

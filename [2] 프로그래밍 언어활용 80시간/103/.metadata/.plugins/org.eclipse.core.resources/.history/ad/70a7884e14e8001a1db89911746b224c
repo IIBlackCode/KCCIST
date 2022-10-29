@@ -1,0 +1,14 @@
+package com.test;
+class Database{
+	void poen() {System.out.println("Database Open");}
+}
+class Oracle extends Database {
+	void select() {System.out.println("Oracle Select");}
+}
+
+
+
+
+public class Test9 {
+
+}

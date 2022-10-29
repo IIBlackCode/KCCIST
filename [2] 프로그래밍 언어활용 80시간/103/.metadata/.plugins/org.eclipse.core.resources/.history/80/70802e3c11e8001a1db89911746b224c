@@ -1,0 +1,16 @@
+package com.test;
+class Animal2 {
+}
+
+class Dog extends Animal2 {
+	
+}
+public class Test8 {
+	public static void main(String[] args) {
+	int a = 100;
+	long b = a; // implicit cast (conversion)
+	long c = Long.MAX_VALUE;
+	int d = (int)c; //explicit cast(conversion)
+	}
+
+}

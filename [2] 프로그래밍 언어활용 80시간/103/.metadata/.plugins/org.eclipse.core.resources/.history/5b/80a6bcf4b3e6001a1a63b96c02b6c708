@@ -1,0 +1,15 @@
+package Study;
+
+public class StudyStart {
+	public static void main(String[] args) {
+		StudyClass c = new StudyClass();
+		
+		c.age = 0;
+		c.name="";
+		
+		StudyClass.name2;
+		StudyClass.age2;
+		
+		
+	}
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="test.MyClass"/>
+<fullyQualifiedTypeName name="test2.MyClass"/>
+<fullyQualifiedTypeName name="com.test2.test.MyClass"/>
+<fullyQualifiedTypeName name="zoo.Cat"/>
+<fullyQualifiedTypeName name="com.test.Dog"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="com.test7.Animal"/>
+</qualifiedTypeNameHistroy>

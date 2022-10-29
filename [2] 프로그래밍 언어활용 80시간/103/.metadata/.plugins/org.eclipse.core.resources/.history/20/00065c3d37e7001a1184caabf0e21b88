@@ -1,0 +1,10 @@
+package mypack;
+import pack.*;
+public class B {
+
+	public static void main(String[] args) {
+A o = new A();
+
+	}
+
+}

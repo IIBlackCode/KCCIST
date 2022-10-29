@@ -1,0 +1,11 @@
+class MyClass4{
+	public int a;
+}
+
+public class Test4 {
+	public static void main(String[] args) {
+MyClass4 c = new MyClass4
+System.out.println(a);
+	}
+
+}

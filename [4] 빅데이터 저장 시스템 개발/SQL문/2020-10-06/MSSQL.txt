@@ -1,0 +1,43 @@
+CREATE database shopping_mall;
+
+DROP TABLE member;
+CREATE TABLE member (
+	member_id 		CHAR(25) 	NOT NULL,
+	member_name 	NCHAR(10) 		NOT NULL,
+	member_addr 	NCHAR(255)	NULL,
+	made_date		DATETIME		DEFAULT GETDATE() NULL
+	
+	PRIMARY KEY(member_id)
+);
+
+DROP TABLE product;
+CREATE TABLE product (
+	product_name 	NCHAR(10) 	NOT NULL,
+	product_pri 	INT 		NOT NULL, 
+	product_day		datetime NOT NULL,
+	product_com		NCHAR(10)	NOT NULL,
+	product_cnt		INT		NOT NULL, 
+	made_date		DATETIME		DEFAULT GETDATE() null
+	
+ 	PRIMARY KEY(product_name)
+);
+
+
+INSERT INTO member VALUES('Dang','당탕이','경기도 부천시 중동',GETDATE());
+INSERT INTO member VALUES('Jee','지운이','서울 은평구 증산동',GETDATE());
+INSERT INTO member VALUES('Han','한주연','인천 남구 주안동',GETDATE());
+INSERT INTO member VALUES('Sang','상달이','경기 성남 분당구',GETDATE());
+
+INSERT INTO product VALUES('컴퓨터',10,'2021.1.1','삼성',17,GETDATE());
+INSERT INTO product VALUES('세탁기',20,'2022.9.1','LG',3,GETDATE());
+INSERT INTO product VALUES('냉장고',5,'2023.2.1','대우',17,GETDATE());
+
+USE shopping_mall;
+
+SELECT member_id AS 아이디, member_name AS '회원이름', member_addr AS 주소  
+FROM member
+ORDER BY made_date ASC;
+
+SELECT product_name AS 제품이름, product_pri AS 제품가격,product_day AS 제조일자, product_com AS 제조회사, product_cnt AS 남은수량 
+FROM product
+ORDER BY made_date ASC;

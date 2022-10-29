@@ -1,0 +1,19 @@
+package com.test;
+class MyClass2{
+	static int a; 
+	static{
+		a=10; 
+		System.out.println("Static Block"){
+	}
+		
+		System.out.println("Static Block");
+	}
+	MyClass2(){
+		System.out.println("Default Constructor")
+	}
+public class Test2{
+	public static void main(String[] args) {
+		MyClass2 c = new 
+	}
+}
+}

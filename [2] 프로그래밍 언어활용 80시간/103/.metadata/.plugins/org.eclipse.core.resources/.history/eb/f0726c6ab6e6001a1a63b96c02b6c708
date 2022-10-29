@@ -1,0 +1,12 @@
+package Study;
+
+public class StudyStart {
+	public static void main(String[] args) {
+		StudyClass 인스턴스 = new StudyClass();
+		
+		인
+		
+		
+		
+	}
+}

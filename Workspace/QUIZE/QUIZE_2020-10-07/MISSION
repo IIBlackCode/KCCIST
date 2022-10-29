@@ -1,0 +1,24 @@
+﻿﻿#미션1. [자바빅데이터] 학생 테이블 및 출석 테이블을 생성하고, 학생3명 및 각 출석 7건을 입력한다.
+CREATE DATABASE javabigdata
+USE javabigdata
+
+##학생 테이블
+DROP TABLE student;
+CREATE TABLE student (
+	s_num		SMALLINT 	PRIMARY KEY AUTO_INCREMENT,	#학번
+	s_name	CHAR(25)		NOT NULL,		#이름
+	s_mail	VARCHAR(25) NOT NULL,		#메일
+	s_addr	VARCHAR(25)		NOT NULL,	#주소
+	s_tel		INT			NULL				#연락처
+);
+
+SELECT * FROM student;
+##출석 테이블
+
+
+#미션2. p655를 참조해서, 위 학생 테이블을 입력/조회하는 프로그램을 작성
+#미션3(선택). 위 미션1을 SQL Server에서 수행되도록 한다.
+#미션4<심화>. 미션2에 변경/삭제 기능도 추가한다.
+#미션5(선택). 위 미션4를 SQL Server에서 수행되도록 한다.
+
+﻿

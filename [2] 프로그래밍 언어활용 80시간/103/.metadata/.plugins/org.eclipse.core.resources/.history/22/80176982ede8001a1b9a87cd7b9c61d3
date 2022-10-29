@@ -1,0 +1,13 @@
+package com.test11;
+
+
+interface Calculator{
+	int calculate(int a, int b);
+}
+
+public class Test1 {
+
+	public static void main(String[] args) {
+	}
+
+}

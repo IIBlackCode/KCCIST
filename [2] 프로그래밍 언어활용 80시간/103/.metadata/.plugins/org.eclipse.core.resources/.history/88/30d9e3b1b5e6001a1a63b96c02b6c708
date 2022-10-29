@@ -1,0 +1,16 @@
+package Study;
+
+public class StudyClass {
+	String 인스턴스변수1;
+	int 인스턴스변수2;
+
+	static String name2;
+	static int age2;
+	
+	String 인스턴스메소드() {
+		return "인스턴스 Method";
+	}
+	static String 스테틱메소드() {
+		return "static method";
+	}
+}

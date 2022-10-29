@@ -1,0 +1,17 @@
+class Employee {
+	public Employee() {
+		name = "ÀÌ¼ø½Å";
+	}
+public Employee(String nm)
+	public String name;
+}
+
+public class Test8 {
+
+	public static void main(String[] args) {
+		Employee emp = new Employee();
+		System.out.println(emp.name);
+
+	}
+
+}

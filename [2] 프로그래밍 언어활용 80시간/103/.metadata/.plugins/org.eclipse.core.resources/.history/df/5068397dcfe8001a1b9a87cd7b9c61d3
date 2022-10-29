@@ -1,0 +1,13 @@
+package Study;
+//for(int i=0; i<4; i++) { 처리할 명령들 } 
+// :정수 값을 담는 i라는 변수 0을 대입하고 i를 1씩 증가시키면서 i가 4보다 작을 동안 {}안을 반복하라.
+
+
+public class for1 {
+
+	public static void main(String[] args) {
+
+
+	}
+
+}

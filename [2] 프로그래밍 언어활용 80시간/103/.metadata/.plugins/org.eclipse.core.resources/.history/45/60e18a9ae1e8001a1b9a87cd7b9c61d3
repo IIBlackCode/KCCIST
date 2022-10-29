@@ -1,0 +1,19 @@
+package com.test9;
+
+interface Database {
+	void open();
+}
+
+class Oracle implements Database {
+	void open() {
+		System.out.println("Oracle open");
+	}
+class MySql implements Database {
+	public void open() {System.out.println("MySql open");}
+	}
+}
+	
+public class Test1 {
+public static void main(String[] args) {
+}
+}

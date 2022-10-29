@@ -1,0 +1,15 @@
+package com.test2;
+class A{
+	
+}
+
+class B extends A {
+	
+}
+public class Test1 {
+
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.test19;
+interface Database {
+	void open();
+	void close();
+}
+abrstract class RDBMS implements Database {
+public abstract void open();
+}
+class Oracle extends RDBMS {
+	public void open() {System.out.println("Oracle");}
+}
+public class Test1 {
+	public static void main(String[] args) {
+		
+		
+	}
+}

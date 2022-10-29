@@ -1,0 +1,14 @@
+class MyClass5{
+	public int a;
+}
+public class Test5 {
+	public static void main(String[] args) {
+int a = 10;
+test(a);
+System.out.println(a);
+	}
+public static void test(int b) {
+b++;
+System.out.println(b);
+}
+}

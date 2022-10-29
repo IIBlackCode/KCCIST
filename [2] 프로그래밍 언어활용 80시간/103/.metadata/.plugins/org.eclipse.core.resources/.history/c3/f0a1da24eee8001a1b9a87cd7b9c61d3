@@ -1,0 +1,22 @@
+package com.test11;
+
+
+interface calculate{int operate(int a, int b); }
+class Plus implements calculate {
+	public int operate(int a, int b) {
+	return a + b;
+}
+}
+class Minus implements calculate {
+public int operate(int a, int b) {
+}
+
+public class Test1 {
+	public static void main(String[] args) {
+		Calculator c = new Calculator(new Plus());
+		c.operate(1,2);
+		Calculator c2 = new Calculator(new Minus());
+		c2.operate(1,2);
+	}
+	}
+}

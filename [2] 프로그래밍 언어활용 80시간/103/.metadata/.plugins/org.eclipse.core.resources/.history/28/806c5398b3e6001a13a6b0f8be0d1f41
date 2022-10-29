@@ -1,0 +1,10 @@
+package Study;
+
+public class StudyClass {
+	String name;
+	int age;
+	
+	static String name2;
+	int String age2; 
+	
+}

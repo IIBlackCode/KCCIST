@@ -1,0 +1,17 @@
+package animal;
+
+public class Dog {
+
+static void welcom(zoo.Cat o2) {
+	o2.makeSound();
+//	o2.makeHappy();
+}
+public static void main(String[] args) {
+zoo.Cat o = new zoo.Cat();
+welcom(o);
+//o.makeSound();
+// o.makeHappy();
+
+	}
+
+}

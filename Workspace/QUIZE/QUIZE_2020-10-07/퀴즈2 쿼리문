@@ -1,0 +1,28 @@
+--이미지 파일을 저장하는 데이터베이스/테이블
+DROP DATABASE image_db
+CREATE DATABASE image_db;
+USE image_db;
+
+#파일코드[PK], 파일명,확장자명,x축크기,y축크기
+DROP TABLE image_table
+CREATE TABLE IF NOT EXISTS image_table (
+  imageId INT  primary KEY AUTO_INCREMENT,
+  imageName VARCHAR(255),
+  imageExt  CHAR(5),
+  xSize INT,
+  ySize INT );
+
+DROP TABLE pixel_table;
+CREATE TABLE IF NOT EXISTS pixel_table(
+  imageId INT NOT NULL,
+  x SMALLINT UNSIGNED,
+  y SMALLINT UNSIGNED,
+  r TINYINT UNSIGNED,
+  g TINYINT UNSIGNED,
+  b TINYINT UNSIGNED,
+  foreign key(imageId) references image_table(imageId));
+
+SELECT * FROM image_table LIMIT 5;
+SELECT * FROM pixel_table;
+
+SELECT FROM image_table a, pixel_table b WHERE a.imageId=b.imageId;

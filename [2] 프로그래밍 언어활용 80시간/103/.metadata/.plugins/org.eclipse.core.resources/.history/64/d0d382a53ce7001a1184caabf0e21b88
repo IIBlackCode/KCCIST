@@ -1,0 +1,31 @@
+package com.test;
+class SinivelCap {  //Äà¹° Ã³Ä¡¿ë Ä¸½¶
+	void take() {
+		System.out.println("Äà¹°ÀÌ ½Ï~ ³³´Ï´Ù.");
+	
+	}
+}
+class SneezeCap {  // ÀçÃ¤±â Ã³Ä¡¿ë Ä¸½¶
+	void take() {
+		System.out.println("ÀçÃ¤±â°¡ ¸Ü½À´Ï´Ù.");
+	}
+}
+class SnuffleCap {  //ÄÚ¸·Èû Ã³Ä¡¿ë Ä¸½¶
+	void take() {
+		System.out.println("ÄÚ°¡ »½ ¶Õ¸³´Ï´Ù.");
+	}
+}
+
+class ColdPatient {
+	void takeSinivelCap(SinivelCap cap) {
+		cap.take()
+		
+	}
+}
+public class BadEncapsulation {
+
+	public static void main(String[] args) {
+
+	}
+
+}

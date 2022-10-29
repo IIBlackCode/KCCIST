@@ -1,0 +1,14 @@
+package Study;
+
+public class StudyClass {
+	String name;
+	int age;
+
+	static String name2;
+	static int age2;
+	
+	String method1() {
+		return "";
+	}
+
+}

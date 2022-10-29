@@ -1,0 +1,38 @@
+package example;
+
+public class MyFriends {
+
+	public static void main(String[] args) {
+class UnivFrends { //대학 동창
+	private String name;
+	private String major; // 전공
+	private String phone;
+	
+	public UniFriend(String na, String ma, String ph) {
+		name = na;
+		major = ma;
+		phone = ph;
+	}
+	public void showInfo() {
+		System.out.println("이름: " + name);
+		System.out.println("전공: " + major);
+		System.out.println("전화: " + phone);
+		
+	}
+}
+
+class CompFriend { // 직장동료
+	private String name;
+	private String department; //부서 
+	private String phone;
+	
+	public CompFriend(String na, String de, String ph) {
+		name = na;
+		department = de;
+		
+	}
+}
+
+	}
+
+}

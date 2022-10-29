@@ -1,0 +1,20 @@
+package test3;
+// 학생 
+// 상태(특징) : 나이, 이름, 성별
+// 동작(행위) : 공부한다
+class Student{
+	String name;
+	int age;
+	String gender; 
+	puvlic void study() {}
+
+}
+
+public class test6 {
+
+	public static void main(String[] args) {
+
+
+	}
+
+}

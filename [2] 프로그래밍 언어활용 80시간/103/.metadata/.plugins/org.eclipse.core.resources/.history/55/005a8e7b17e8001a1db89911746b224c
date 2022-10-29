@@ -1,0 +1,14 @@
+package com.test;
+class Animal3 {
+	void eat() {}
+}
+class Dog3 extends Animal3 {
+	void bark() {}
+}
+public class Test10 {
+	public static void main(String[] args) {
+
+
+	}
+
+}

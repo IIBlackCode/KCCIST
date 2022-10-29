@@ -1,0 +1,17 @@
+package com.test6;
+
+class A {
+}
+
+class B extends A {
+}
+
+public class Test1 {
+	public static void main(String[] args) {
+		A a = new A();
+		System.out.println(a instanceof A);
+		B b = new B();
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.test8;
+
+class A extends Object {
+	public String toString() {
+		return "æ»≥Á«œººø‰";
+	}
+
+}
+
+public class Test1 {
+	public static void main(String[] args) {
+		A a = new A();
+		System.out.println(a.toString());
+	}
+
+}

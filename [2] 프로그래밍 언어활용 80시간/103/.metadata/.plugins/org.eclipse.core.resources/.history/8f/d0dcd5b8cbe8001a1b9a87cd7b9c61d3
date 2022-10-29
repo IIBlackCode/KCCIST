@@ -1,0 +1,28 @@
+package com.test4;
+
+class Database {
+	void open() {
+		System.out.println("Database open");
+	}
+}
+
+class Oracle extends Database {
+	void open() {
+		System.out.println("Oracle open");
+	}
+}
+
+class MySql extends Database {
+	void open() {
+		System.out.println("MySql open");
+	}
+}
+
+public class Test1 {
+	public static void main(String[] args) {
+		Database oracle = new Oracle();
+		oracle.open();
+		Database mysql = new MySql();
+		mysql.open();
+	}
+}

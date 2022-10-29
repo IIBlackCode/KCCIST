@@ -1,0 +1,16 @@
+package com.test2;
+
+class Animal {void eat() {System.out.println("Animal eat");}}
+class Dog extends Animal {void bark() {System.out.println("Dog bark");}}
+class Cat extends {void meow() {System.out.println("Cat meow");}}
+public class Test1 {
+	static void allEat(Animal a) {
+		a.eat();
+	}
+	public static void main(String[] args) {
+Animal a = new Dog();
+Animal a2 = new Cat();
+
+	}
+
+}

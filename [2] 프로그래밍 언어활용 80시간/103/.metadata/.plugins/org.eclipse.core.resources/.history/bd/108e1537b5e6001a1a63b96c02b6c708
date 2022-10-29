@@ -1,0 +1,16 @@
+package Study;
+
+public class StudyStart {
+	public static void main(String[] args) {
+		StudyClass 인스턴스변수 = new StudyClass();
+		
+		인스턴스변수.age = 0;
+		인스턴스변수ㄴ.name="";
+		
+		StudyClass.name2 = "문자열";
+		StudyClass.age2	= 0;
+		
+		
+		
+	}
+}

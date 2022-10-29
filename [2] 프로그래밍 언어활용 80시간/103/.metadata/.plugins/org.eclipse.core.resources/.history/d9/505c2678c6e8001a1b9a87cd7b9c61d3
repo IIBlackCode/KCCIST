@@ -1,0 +1,33 @@
+package com.test2;
+
+class A {
+	int a;
+
+	A() {
+		a = 100;
+		System.out.println(a);
+	}
+
+	A(int a) {
+		this.a = a;
+		System.out.println(a);
+	}
+
+	class B extends A {
+		void  bMethod() {
+			System.out.println(a);
+		}
+	}
+
+	}
+
+	public class Test1 {
+
+	public static void main(String[] args) {
+		A a = new A;
+		A a2 = new A(200);
+		B b = new B();
+		b.bMethod();
+
+	}
+}

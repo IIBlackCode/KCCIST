@@ -1,0 +1,15 @@
+package com.test;
+
+class A{
+	A(){System.out.println("Default A Constructor");}
+void aMethod() { System.out.println("aMethods"); }
+	B(){ System.out.println("Default B Constructor");}
+}
+
+public class Test7 {
+	public static void main(String[] args) {
+		// A a = new A();
+		B b = new B();
+b.aMethod();
+	}
+}

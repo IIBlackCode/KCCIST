@@ -1,0 +1,10 @@
+package com.test;
+class Student3{
+	String name;
+	static String school;
+}
+public class Test12 {
+	public static void main(String[] args) {
+	}
+
+}

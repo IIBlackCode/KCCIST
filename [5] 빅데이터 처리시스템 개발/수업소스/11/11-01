@@ -1,0 +1,20 @@
+--DATABASE 생성
+DROP DATABASE if EXISTS photo_db;
+CREATE DATABASE photo_db;
+USE photo_db;
+
+DROP TABLE photo_table;
+CREATE TABLE photo_table (
+	p_id		INT PRIMARY KEY AUTO_INCREMENT,
+	p_fname 	VARCHAR(255),	##파일명
+	p_ext		CHAR(5),			##확장명
+	p_size	BIGINT,			##파일크기
+	p_height	INT,				##이미지 높이
+	p_width	INT,				##이미지 넓이
+	p_photo	LONGBLOB,
+	p_upDate	DATE, 			##생성날짜
+	p_upUser	CHAR(10)			##업로드 유저[FK]
+);
+
+SELECT * FROM photo_table;
+

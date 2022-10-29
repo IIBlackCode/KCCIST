@@ -1,0 +1,17 @@
+class MyClass4 {
+	public int a;
+	public String b;
+}
+
+public class Test4 {
+	public static void main(String[] args) {
+		MyClass4 c = new MyClass4();
+		System.out.println(c.a);
+		System.out.println(c.b);
+		c.a = 10; //setter
+		System.out.println(c.a); //getter
+		c.b = "ÀÌ¼ø½Å";
+		
+	}
+
+}

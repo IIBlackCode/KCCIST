@@ -1,0 +1,11 @@
+package Study;
+
+// 2차원 배열의 경우 이중 for문을 사용 인덱스 표현 가능, 
+// 2차원 배열 출력코드에 for문 사용 예제 p.64 [코드2-13]
+
+class  {
+	public static void main(String[] args) {
+
+	}
+
+}

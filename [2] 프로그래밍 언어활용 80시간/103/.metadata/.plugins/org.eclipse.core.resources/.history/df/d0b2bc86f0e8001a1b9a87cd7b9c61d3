@@ -1,0 +1,15 @@
+package com.test12;
+
+interface Database {
+	void open();
+}
+class Oracle implements Database {
+	
+}
+
+public class Test1 {
+	public static void main(String[] args) {
+
+	}
+
+}

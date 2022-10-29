@@ -1,0 +1,10 @@
+package com.test;
+class MyClass3 extends Object {
+	
+}
+public class Test11 {
+	public static void main(String[] args) {
+
+	}
+
+}

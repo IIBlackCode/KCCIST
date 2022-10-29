@@ -1,0 +1,15 @@
+package com.test4;
+class Database {
+	void open() {System.out.println("Database open");}
+}
+class Oracle {
+	void open() {System.out.println("Oracle open");}
+}
+class MySql {
+	void open() {System.out.println("MySql open");}
+}
+public class Test1 {
+public static void main(String[] args) {
+
+}
+}
