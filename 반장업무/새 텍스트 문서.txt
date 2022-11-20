@@ -1,0 +1,84 @@
+# R 64bit 실행(rstudio 실행도 가능)
+# java, rJava 설치 install.packages("multilinguer")
+
+install.packages("multilinguer")
+
+# 이때 mac 사용자는 데스크탑 비밀번호를 물어봅니다. 입력해줘야 설치가 진행됩니다.
+
+library(multilinguer)
+
+install_jdk()
+
+# 위 함수에서 에러가 발생하면 알려주세요
+
+# https://github.com/mrchypark/multilinguer/issues
+
+
+# 의존성 패키지 설치
+install.packages(c("hash", "tau", "Sejong", "RSQLite", "devtools", "bit", "rex", "lazyeval", "htmlwidgets", "crosstalk", "promises", "later", "sessioninfo", "xopen", "bit64", "blob", "DBI", "memoise", "plogr", "covr", "DT", "rcmdcheck", "rversions"), type = "binary")
+
+
+# github 버전 설치
+install.packages("remotes")
+
+# 64bit 에서만 동작합니다.
+
+remotes::install_github('haven-jeon/KoNLP', upgrade = "never", INSTALL_opts=c("--no-multiarch"))
+install.packages("KoNLP")
+library(KoNLP)
+#extractNoun("아버지가 가방에 들어가신다다")
+
+##---------------------------------------------------------
+
+rm(list=ls())
+getwd()
+#C:/R/WorkSpace
+setwd("C:/R/WorkSpace")
+#install.packages("KoNLP")
+
+#Data read
+jejuText1<-readLines("jeju.txt")
+jejuList1<-readLines("제주도여행지.txt")
+
+#jeju.txt로부터 읽은 데이터를 extractNoun(명사만 추출)적용하여 list로 반환
+jejuText2<- sapply(jejuText1,extractNoun, USE.NAMES=F)
+
+#unlist() : LIST > 벡터 변환
+jejuText3<-unlist(jejuText2)
+#jejuList1<-unlist(jejuList1)
+
+wordCount <- c()
+for (index in 1:length(jejuList1))
+  #jejuText4[index] <- c(jejuList1[index],length(jejuText3[grep(jejuList1[index],jejuText3)]))
+  wordCount[index] <- c(length(jejuText3[grep(jejuList1[index],jejuText3)]))
+wordCount
+wordCount2<-list()
+wordCount2<cat(wordCount)
+
+write(unlist(wordCount2),"jejuCount1.txt")
+jejuC1<-readLines("jejuCount1.txt")
+
+jejuText4<- c()
+for (index in 1:length(jejuList1))
+  #jejuText4[index] <- c(jejuList1[index],jejuC1[index])
+  print(jejuC1[index])
+
+
+write(unlist(data3),"seoul_2.txt")
+data4<-read.table("seoul_2.txt")
+data4
+#table(unlist(data2))
+nrow(data4)
+wordcount <- table(data4)
+head(sort(wordcount,decreasing = T),20)
+data4
+#install.packages("wordcloud") 
+#install.packages("RColorBrewer")
+
+library(RColorBrewer) 
+library(wordcloud) 
+palete <- brewer.pal(9,"Set3") 
+wordcloud(names(wordcount),freq=wordcount,scale=c(5,1),rot.per=0.25,min.freq=1,
+          random.order=F,random.color=T,colors=palete)
+
+legend(0.3,1 ,"제주도추천여행코스분석",cex=0.8,fill=NA,border=NA,bg="white",text.col="red",text.font=2,box.col="red")

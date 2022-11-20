@@ -1,0 +1,66 @@
+# 패키지 설치 
+install.packages("ggmap")
+install.packages("ggplot2")
+install.packages("raster")
+install.packages("rgeos")
+install.packages("maptools")
+install.packages("rgdal")
+
+# import 
+library(ggmap)
+library(ggplot2)
+library(raster)
+library(rgeos)
+library(maptools)
+library(rgdal)
+
+# G:/서울기술교육센터/[11] 텍스트 데이터 분석/2020-12-07/QUIZE_01
+data <- read.csv("G:/서울기술교육센터/[11] 텍스트 데이터 분석/2020-12-15/data.csv", header = TRUE) #시각화할 데이터셋
+map <- shapefile("G:/서울기술교육센터/[11] 텍스트 데이터 분석/2020-12-15/TL_SCCO_SIG.shp") #지리 정보 데이터셋
+
+#  map을 spTransform() 함수를 이용하여 좌표계 변환
+map <- spTransform(map, CRSobj = CRS('+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs'))
+map@polygons[[1]]@Polygons[[1]]@coords %>% head(n = 10L)
+show(map)
+#  fortify() 함수를 이용하여 map을 data frame으로 변환합니다. 이때, region = ‘SIG_CD’ 옵션으로 인해 SIG_CD 컬럼이 id로 변환
+new_map <- fortify(map, region = 'SIG_CD')
+show(new_map)
+# 지리 정보 자료에는 대한민국 모든 구가 포함되어 있는데, id가 11740 이하가 서울시 구에 해당합니다. 따라서 현재 문자형인 id 변수를 숫자로 변환한 후 11740 이하만 추출하여 seoul_map 변수를 생성
+new_map$id <- as.numeric(new_map$id)
+seoul_map <- new_map[new_map$id <= 11740,]
+
+# 시각화할 자료와 seoul_map에 id 변수가 존재할테며 이를 key로 조인을 할 차례입니다. 다음과 같이 merge() 함수를 이용
+joinDataWithSeoul <- merge(seoul_map, data, by='id')
+
+
+#  ggplot을 활용하여 지도를 변형
+#  서울시 범죄 대비 살인 현황
+
+ggplot(joinDataWithSeoul, aes(x=slong, y=slat, label=시군구명), guide=FALSE) +
+  theme_bw() + labs(title = "서울시 범죄 현황 [김민서]") + 
+  theme(plot.title = element_text(size=28,hjust = 0.5)) +
+  theme(panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank(), panel.grid.major.y = element_blank(), panel.grid.minor.y = element_blank(), plot.title = element_text(face = "bold", size = 18, hjust = 0.5)) + 
+  geom_polygon(data = joinDataWithSeoul, aes(x=long, y=lat, group=group, fill = 합계), color='black')+
+  geom_point(colour="white", size=joinDataWithSeoul$폭력, fill='red', shape=21)+
+  geom_text(size=3)+
+  scale_size_area(max_size = 22, guide=FALSE)
+  
+ggplot(joinDataWithSeoul, aes(x=slong, y=slat, label=시군구명), guide=FALSE) +
+  geom_polygon(data = joinDataWithSeoul, aes(x=long, y=lat, group=group, fill = 합계), color='black')+
+  theme_bw() + labs(title = "서울시 범죄 현황 [김민서]", fill="범죄 수")+
+  geom_point(data=joinDataWithSeoul,aes(x=long, y= lat,size=폭력), shape=16)
+  scale_color_gradient(low="#FFDCDC", high = "#DB0000")+
+  scale_size_area(max_size = 22, guide=FALSE)+
+  geom_text(data = joinDataWithSeoul ,aes(x = long,y = lat,label= paste(joinDataWithSeoul, 시군구명,sep='\n')))
+
+
+  
+  
+
+
+  
+  
+  
+
+
+  

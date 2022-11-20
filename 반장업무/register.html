@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입 페이지</title>
+<script src="jquery-3.5.1.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#Register").click(function () {
+			///입력값 개수(count)가 14일 경우 회원가입 성공
+			count=0;
+
+			///이름
+			///userName
+			if($("#userName").val()=="") {
+				$("#userName").css("background-color", "red");
+				$("#Msg").text("이름를 입력하세요.");
+				$("#userName").focus();
+			} else {
+				$("#userName").css("background-color", "white");
+				count+=1;
+			}
+
+			///아이디
+			///userId
+			if($("#userId").val()=="") {
+				$("#userId").css("background-color", "red");
+				$("#Msg").text("아이디를 입력하세요.");
+				$("#userId").focus();
+			} else {
+				$("#userId").css("background-color", "white");
+				count+=1;
+			}
+
+			///비밀번호
+			///userPwd1
+			if($("#userPwd1").val()=="") {
+				$("#userPwd1").css("background-color", "red");
+				$("#Msg").text("비밀번호를 입력하세요.");
+				$("#userPwd1").focus();
+			} else {
+				$("#userPwd1").css("background-color", "white");
+				count+=1;
+			}
+
+			///비밀번호 확인
+			///userPwd2
+			if($("#userPwd2").val()=="") {
+				$("#userPwd2").css("background-color", "red");
+				$("#Msg").text("비밀번호 확인을 입력하세요.");
+				$("#userPwd2").focus();
+			} else if($("#userPwd2").val()==$("#userPwd1").val()) {
+				$("#userPwd2").css("background-color", "white");
+				count+=1;
+			} else {
+				$("#userPwd2").css("background-color", "red");
+				$("#Msg").text("비밀번호가 다릅니다.");
+				$("#userPwd2").focus();
+			}
+
+			///이메일
+			///userEmail
+			if($("#userEmail").val()=="") {
+				$("#userEmail").css("background-color", "red");
+				$("#Msg").text("Email을 입력하세요.");
+				$("#userEmail").focus();
+			} else {
+				$("#userEmail").css("background-color", "white");
+				count+=1;
+			}
+
+			///성별
+			///userGender
+			//alert($("input[name='userCar']:checked").length); 라디오 (미)선택 시의 값을 알아내기
+			var radio_userGender = $('input[name=userGender]');
+			var radio_type = null;
+			for(var i=0;i<radio_userGender.length;i++){
+				if(radio_userGender[i].checked == true){ 
+					radio_type = radio_userGender[i].value;
+				}
+			}
+			if(radio_type == null){
+				$("#Msg").text("성별을 선택하세요.");
+			} else {
+				count+=1;
+			}
+
+			///전화번호
+			///userPhoneH1
+			if($("#userPhoneH1").val()=="") {
+				$("#userPhoneH1").css("background-color", "red");
+				$("#Msg").text("전화번호를 입력하세요.");
+				$("#userPhoneH1").focus();
+			} else {
+				$("#userPhoneH1").css("background-color", "white");
+				count+=1;
+			}
+			///userPhoneH2
+			if($("#userPhoneH2").val()=="") {
+				$("#userPhoneH2").css("background-color", "red");
+				$("#Msg").text("전화번호를 입력하세요.");
+				$("#userPhoneH2").focus();
+			} else {
+				$("#userPhoneH2").css("background-color", "white");
+				count+=1;
+			}
+			///userPhoneH3
+			if($("#userPhoneH3").val()=="") {
+				$("#userPhoneH3").css("background-color", "red");
+				$("#Msg").text("전화번호를 입력하세요.");
+				$("#userPhoneH3").focus();
+			} else {
+				$("#userPhoneH3").css("background-color", "white");
+				count+=1;
+			}
+
+			///핸드폰
+			///userPhoneM1
+			if($("#userPhoneM1").val()=="") {
+				$("#userPhoneM1").css("background-color", "red");
+				$("#Msg").text("전화번호를 입력하세요.");
+				$("#userPhoneM1").focus();
+			} else {
+				$("#userPhoneM1").css("background-color", "white");
+				count+=1;
+			}
+			///userPhoneM2
+			if($("#userPhoneM2").val()=="") {
+				$("#userPhoneM2").css("background-color", "red");
+				$("#Msg").text("전화번호를 입력하세요.");
+				$("#userPhoneM2").focus();
+			} else {
+				$("#userPhoneM2").css("background-color", "white");
+				count+=1;
+			}
+			///userPhoneM3
+			if($("#userPhoneM3").val()=="") {
+				$("#userPhoneM3").css("background-color", "red");
+				$("#Msg").text("전화번호를 입력하세요.");
+				$("#userPhoneM3").focus();
+			} else {
+				$("#userPhoneM3").css("background-color", "white");
+				count+=1;
+			}
+
+			///홈페이지
+			///userHomepage
+			if($("#userHomepage").val()=="") {
+				$("#userHomepage").css("background-color", "red");
+				$("#Msg").text("홈페이지를 입력하세요.");
+				$("#userHomepage").focus();
+			} else {
+				$("#userHomepage").css("background-color", "white");
+				count+=1;
+			}
+
+			///관심분야
+			///userInterest
+			//alert($("input[name='userInterest']:checked").length); 체크박 (미)선택 시의 값을 알아내기
+			var check_userInterest = $('input[name=userInterest]');
+			var check_type = null;
+			for(var k=0; k<check_userInterest.length; k++){
+				if(check_userInterest[k].checked == true){ 
+					check_type = check_userInterest[k].value;
+				}
+			}
+			if(check_type == null){
+				$("#Msg").text("취미를 하나 이상 선택하세요.");
+			} else {
+				count+=1;
+			}
+
+			///회원가입 여부 확인
+			if(count == 14){
+				alert("회원가입 성공");
+			} else {
+				alert("회원가입 실패");
+				return false
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<h2>회원 가입</h2>
+	<form name="USER" action="login.html" method="get">
+	<table style="background: grey;">
+		<tr>
+			<td>이름</td><td><input type="text"  id="userName"  placeholder="이름을 입력하세요" size="20"  autofocus></td>
+		</tr>
+		<tr>
+			<td>아이디</td><td><input type="text"  id="userId"  placeholder="아이디를 입력하세요" size="30"></td>
+		</tr>
+		<tr>
+			<td>비밀번호</td><td><input type="text"  id="userPwd1"  placeholder="비밀번호를 입력하세요" size="30"></td>
+		</tr>
+		<tr>
+			<td>비밀번호 확인</td><td><input type="text"  id="userPwd2"  placeholder="비밀번호 확인을 입력하세요" size="30"></td>
+		</tr>
+		<tr>
+			<td>이메일</td><td><input type="text"  id="userEmail" size="20"></td>
+		</tr>
+		<tr>
+			<td>성별</td><td><input type="radio"  name="userGender" value="male">남자
+			<input type="radio"  name="userGender" value="female">여자</td>
+		</tr>
+		<tr>
+			<td>전화번호</td>
+			<td>
+			<input type="text"  id="userPhoneH1" size="2">
+			-
+			<input type="text"  id="userPhoneH2" size="6">
+			-
+			<input type="text"  id="userPhoneH3" size="6">
+			</td>
+		</tr>
+		<tr>
+			<td>핸드폰</td>
+			<td><select id="userPhoneM1">
+			<option value="" ></option>
+			<option value="1">010</option>
+			<option value="2">011</option>
+			<option value="3">016</option>
+			<option value="3">019</option>
+			</select>
+			-
+			<input type="text"  id="userPhoneM2" size="6">
+			-
+			<input type="text"  id="userPhoneM3" size="6"></td>
+		</tr>
+		<tr>
+			<td>홈페이지</td><td> <input type="text"  id="userHomepage" size="20"></td>
+		</tr>
+		<tr>
+			<td>관심분야</td><td>
+			<input type="checkbox" name="userInterest" value="economy">경제
+			<input type="checkbox" name="userInterest" value="IT">IT
+			<input type="checkbox" name="userInterest" value="society">사회
+			<input type="checkbox" name="userInterest" value="science">과학
+			<input type="checkbox" name="userInterest" value="music">음악
+			<input type="checkbox" name="userInterest" value="art">미술
+			</td>
+		</tr>
+		<tr>
+			<td>하고 싶은 말</td><td> <textarea cols="40" rows="5"></textarea></td>
+		</tr>
+		<tr>
+		<td><input type="submit" value="확인" id="Register"> <input type="reset" value="취소"></td>
+		</tr>
+	</table>
+	&nbsp;<span id="Msg"></span>
+	</form>
+</body>
+</html>

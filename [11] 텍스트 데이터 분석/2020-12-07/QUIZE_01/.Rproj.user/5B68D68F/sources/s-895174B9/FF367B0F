@@ -1,0 +1,32 @@
+{
+    "id": "FF367B0F",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1607996596691.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "expression": "new_map",
+        "caption": "new_map",
+        "totalObservations": "1337760",
+        "displayedObservations": "1337760",
+        "variables": "7",
+        "cacheKey": "96A78F9B",
+        "object": "new_map",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=new_map&cache_key=96A78F9B&max_cols=50",
+        "preview": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 2314861394265469556,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1607996596691,
+    "read_only": false,
+    "read_only_alternatives": []
+}
