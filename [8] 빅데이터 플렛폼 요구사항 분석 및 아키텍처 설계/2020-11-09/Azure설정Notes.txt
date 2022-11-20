@@ -1,0 +1,12 @@
+* 인바운드 보안 규칙  
+80
+8080
+1521
+3389
+* .net framework 3.5 & 2.0
+* language setting korean
+* jdk 설치 & 환경변수
+* tomcat설치 & 구동 확인
+http://52.230.20.3:8080/
+* oracle설치후 확인 (sql developer)
+

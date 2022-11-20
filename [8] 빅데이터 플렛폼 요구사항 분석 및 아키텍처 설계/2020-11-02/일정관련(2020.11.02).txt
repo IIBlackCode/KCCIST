@@ -1,0 +1,4 @@
+11.2 ~ 11.3 데이터베이스모델링
+11.4 ~ 11.9 오라클 SQL과 PL/SQL
+11.10 ~ 11.13 Servlet & JSP
+11.16 ~ 11.2 Machine Learning & Deep Learning

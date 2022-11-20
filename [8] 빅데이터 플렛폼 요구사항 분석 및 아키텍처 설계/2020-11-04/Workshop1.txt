@@ -1,0 +1,68 @@
+--7. member 테이블에서 사원의 이름 , 직위 , 입사일 과 입사한 요일을 표시하되
+--월요일이 처음으로 하는 순서로 입사요일을 정렬 하십시오
+select 
+--    * 
+    name as "사원",
+    jikwi as "직위",
+    hire as "입사일",
+    to_char(hire,'day') as "입사요일",
+    to_char(hire-1,'D') as ord
+from member
+order by ord asc
+;
+
+--8. 모든 직원의 이름 , 직위 , 직위별 등급을 표시 하십시오 . 각 직위별 등급은 아
+--래를 참조하십시오
+--직위 직위별등급
+--------------------------
+--사장 A
+--부장 B
+--과장 C
+--대리 D
+--사원 E
+select 
+--    * 
+    name as "이름",
+    jikwi as "직위",
+    DECODE(jikwi,'사장','A','부장','B','과장','C','대리','D','사원','E') as "직위별 등급"
+from member;
+
+--9. 각 직원들의 이름과 연봉을 계산 하십시오 (sal *12 +bonus)
+select 
+--    * 
+    name as "이름",
+    sal as "월급",
+    sal*12+decode(bonus,bonus =null,0) as "연봉"
+from member;
+
+--10. 2004 년에 입사한 직원의 사번과 이름을 표시하십시오
+select 
+--    * 
+    member_id as "사원",
+    name as "사원",
+    jikwi as "직위",
+    hire as "입사일",
+    to_char(hire,'YYYY') as year
+from member
+where to_char(hire,'YYYY') = '2004'
+--order by ord asc
+;
+
+--11. 관리자가 없는 직원의 이름과 직위를 표시하십시오
+select
+    *
+from member
+where mgr is null
+;
+--12. 보너스를 받은 직원의 
+--이름과 급여 , 보너스를 기준으로 
+--내림차순 정렬하여
+--표시하십시오
+select 
+--    * 
+    name as "사원",
+    sal as "급여",
+    bonus as "보너스"
+from member
+where bonus is not null
+order by bonus desc

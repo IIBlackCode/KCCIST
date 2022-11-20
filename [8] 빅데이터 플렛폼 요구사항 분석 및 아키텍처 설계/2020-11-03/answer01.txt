@@ -1,0 +1,12 @@
+SELECT * FROM MEMBER;
+SELECT * FROM DEPT;
+SELECT * FROM GRADE;
+DESC MEMBER;
+SELECT LENGTH(NAME) FROM MEMBER;
+
+
+SELECT name, sal FROM MEMBER WHERE sal NOT BETWEEN 14000 AND 30000;
+SELECT member_id, name, sal, sal * 1.20 FROM MEMBER;
+SELECT name, months_between(sysdate, hire) FROM MEMBER;
+SELECT name, round(months_between(sysdate, hire), 2) FROM MEMBER;
+SELECT name, lpad(sal, 10, '#') FROM MEMBER;
