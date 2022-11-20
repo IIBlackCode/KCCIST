@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#menu1 {
+		background-color: red;
+		height: 80px;
+		width: 80px;
+		right: 0px;
+		bottom: 0px;
+		position: absolute;
+	}
+	#menu2 {
+		background-color: green;
+		height: 80px;
+		width: 80px;
+		top: 30px;
+		right: 0px;
+		bottom: 0px;
+		position: relative;
+	}
+</style>
+
+</head>
+<body>
+	<div id="menu1"></div>
+	<div id="menu2"></div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	function addElement() {
+		var element_h3 = document.createElement('h3');
+		var textNode = document.createTextNode('This is Test Message');
+		
+		element_h3.appendChild(textNode);
+		document.body.appendChild(element_h3)
+	}
+
+</script>
+
+</head>
+<body>
+	<button onclick="addElement()">Click This Button</button>
+</body>
+</html>

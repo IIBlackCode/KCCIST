@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	document.getElementById("msg").style.color="blue";
+	</script>
+	
+	<input type="button" onclick="textStyle()" value="Change text style">
+	<input type="button" onclick="textHidden()" value="text hidden">
+	<input type="button" onclick="textVisible()" value="Change Visible">
+	
+</body>
+</html>

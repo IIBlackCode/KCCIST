@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<script>
+	
+	document.write("<h1>공백 데이터 제외하고 연산하기</h1>");
+	
+	var com = [95,88,,72,68,,99,82,78,85];	//10명중 8명의 점수만 입력
+	var getAvg;
+	
+	function printAvg() {
+		var i, sum=0, count=0;
+		var n=com.length;
+		
+		document.write(n+"명의 점수 입력 <p/>");
+		
+		for(i=0;i<n;i++) {
+			if(com[i] ===undefined) {
+				continue;
+			}else{
+				sum += com[i];
+				count++;				
+			}
+		}
+		
+		document.write("점수를 입력한 학생"+count + "명<p/>");
+		document.write("총합 : "+sum+"<p/>");
+		
+		return (sum/count);
+	}
+	
+	getAvg = printAvg();
+	document.write("평균 :<b>"+getAvg + "</b><p/>")
+	
+	document.write("<hr/>")/* ================================================================ */
+	
+	document.write("<h1>예제 9-16 배열에 다양한 데이터 타입을 가진 원소 저장하기</h1>");
+	var x = 5;
+	var arr = [100, "Seoul", true, x];
+	function printArr() {
+		var i ;
+		for(i=0; i<arr.length; i++) {
+			document.write("배열 데이터["+i+"] = "+arr[i] + "<br>")
+		}
+	}
+	printArr()
+	
+</script>
+
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

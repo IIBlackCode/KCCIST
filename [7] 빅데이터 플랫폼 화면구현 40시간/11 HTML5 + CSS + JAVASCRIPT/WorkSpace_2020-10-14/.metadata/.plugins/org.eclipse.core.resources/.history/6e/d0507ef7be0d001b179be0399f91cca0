@@ -1,0 +1,2 @@
+document.write("<h1>Test</h1>")
+document.write("<p>Test Message</p>")

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script>
+$.ajax({
+    dataType : 'jsonp',
+    contentType: 'application/json',
+    crossOrigin : true,
+    type : 'GET',
+    headers: {
+        'Access-Control-Allow-Credentials' : true,
+        'Access-Control-Allow-Origin':'*',
+        'Access-Control-Allow-Methods':'GET',
+        'Access-Control-Allow-Headers':'application/json'
+    },
+    jsonpCallback: "callback",
+    url: "http://www.jinju.go.kr/openapi/tour/tourinfo.do",
+    success: function(data) {
+     	console.log(data);
+    }
+});
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+* {	border: 1px solid black;}
+div {
+	background-color: yellow;
+	border:15px solid navy;
+	margin: 25px;
+	padding:25px;
+	width: 100px;
+	
+}
+</style>
+
+</head>
+<body>
+
+	<div class="menu1">Content</div>
+	
+</body>
+</html>

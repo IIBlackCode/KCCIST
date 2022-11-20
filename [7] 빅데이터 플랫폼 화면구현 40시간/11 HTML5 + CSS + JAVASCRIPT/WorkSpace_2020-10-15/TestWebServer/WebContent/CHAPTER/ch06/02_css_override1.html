@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<!-- 외부 스타일 시트를 정의하는 위치가 중요 -->
+<link type="text/css" rel="stylesheet" href="css/02_css_override.css"></link>
+	<style>
+		p { color: blue; }
+		p { color: yellow; }
+		p { color: red; }
+	</style>
+
+<body>
+	
+	<p>CSS가 중복 정의된 경우 어떤 것이 적용될까?</p>	
+	<div board="1">
+		<h3>적용된 속성값<h3>
+		<h3>color:red;<h3>
+		<h3>background-color : yellow</h3>
+	</div>
+</body>
+</html>

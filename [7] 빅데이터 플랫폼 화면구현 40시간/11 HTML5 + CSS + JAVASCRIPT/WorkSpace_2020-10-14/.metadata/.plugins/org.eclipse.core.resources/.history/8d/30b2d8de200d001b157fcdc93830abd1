@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link type="text/css" rel="stylesheet" href="mission.css"/>
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+		</div>
+		<div class="content">
+			<div class="nav"></div>
+			<div class="section"></div>
+		</div>
+		<div class="footer">
+		</div>
+	</div>
+</body>
+</html>

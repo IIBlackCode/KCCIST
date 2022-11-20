@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>예제 4-9 셀 병합하기</title>
+</head>
+<body>
+
+	<section>
+		<article>
+			<table border="1" style="width:50%">
+				<caption>행 통합 테이블</caption>
+				<tr>
+					<th>1행</th>
+					<td>1행 2열</td>
+				</tr>
+				<tr>
+					<th rowspan="2">2행</th>
+					<td>2행 2열</td>
+				</tr>
+				<tr>
+					<td>3행 2열</td>
+				</tr>
+			</table>
+		</article>
+	</section>
+	
+	<p></p>
+	
+	<section>
+		<table border="1" style="width:50%">
+			<caption>열 통합 테이블</caption>
+			<tr>
+				<th>1열</th>
+				<th colspan="2">2열</th>
+			</tr>
+			<tr>
+				<td>2행 1열</td>
+				<td>2행 2열</td>
+				<td>2행 3열</td>
+			</tr>
+		</table>
+	</section>
+</body>
+</html>

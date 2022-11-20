@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script블럭 여러번 사용하기</title>
+
+<script type="text/javascript">
+
+	window.location.href = "http://www.naver.com"
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

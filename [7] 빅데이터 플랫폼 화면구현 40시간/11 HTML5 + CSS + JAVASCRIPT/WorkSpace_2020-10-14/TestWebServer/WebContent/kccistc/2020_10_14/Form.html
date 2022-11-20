@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가입</title>
+
+<!-- JQuery -->
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<script>
+
+	function CheckForm() {
+		/*ID 유효성 검사*/
+		if (document.getElementById("userID").value =="" || document.getElementById("userID").value ==null) {
+			//alert("Please input id");
+			//아이디 미입력 후 아이디칸에 focus
+			document.getElementById("userID").focus();
+			$('#id_Check').css('color','red').html("아이디를 입력하시오");
+			
+			return false;
+		}else if (!(document.getElementById("userID").value =="" || document.getElementById("userID").value ==null)){
+			$('#id_Check').css('color','green').html("아이디 입력 확인");
+		}// The end of if
+		
+		/*PW 유효성 검사*/
+		if (document.getElementById("userPW").value =="" || document.getElementById("userPW").value ==null) {
+			//alert("Please input password");
+			//아이디 미입력 후 아이디칸에 focus
+			document.getElementById("userPW").focus();
+			$('#pw_Check').css('color','red').html("비밀번호를 입력하시오");
+			return false;
+		}else if(!(document.getElementById("userPW").value =="" || document.getElementById("userPW").value ==null)) {
+			$('#pw_Check').css('color','green').html("비밀번호 확인");
+		}// The end of if
+		
+		/*Gender 성별 선택*/
+		var rdo_gender = document.getElementsByName("gender");
+		var select_rdo_gender = document.getElementsByName("gender").value;
+		var count = 0;
+		for(i = 0; i<rdo_gender.length; i++) {
+			console.log(select_rdo_gender.length)
+			if(rdo_gender[i].checked == true) {
+				count +=1;				
+			}
+		}//The end of for
+		$('#gender_Check').css('color','green').html(""+select_rdo_gender+"");
+		
+		console.log(count);
+		
+		/*PW 유효성 검사*/
+		if (document.getElementsByName("job").selectedIndex == 0) {
+			
+			document.getElementsByName("job").focus();
+			console.log("0번쨰 index 선택")
+			return false;
+		}// The end of if
+	}// The end of Method
+	
+</script>
+
+</head>
+<body>
+	<form>
+		<table border = "1">
+			<tr>
+				<td>아이디</td>
+				<td><input type="text" id="userID"></td>
+				<td><small id="id_Check"></small></td>
+				
+			</tr>
+			<tr>
+				<td>암  호</td>
+				<td><input type="password" id="userPW"></td>
+				<td><small id="pw_Check"></small></td>
+			</tr>
+			<tr>
+				<td>성  별</td>
+				<td>
+					<input type="radio" name="gender" value="male">남
+					<input type="radio" name="gender" value="female">여
+				</td>
+				<td><small id="gender_Check"></small></td>
+			</tr>
+			<tr>
+				<td>직  업</td>
+				<td>
+					<select name="job">
+					<option value="">선택해주세요</option>
+					<option value="1">회사원</option>
+					<option value="2">학생</option>
+				</td>
+			</tr>
+			<tr>
+				<td>취  미</td>
+				<td>
+					<input type="checkbox" name="hobby" value="scooer">축구
+					<input type="checkbox" name="hobby" value="basketball">농구
+					<input type="checkbox" name="hobby" value="baseball">야구
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" value="등록" onclick="CheckForm();">
+					<input type="reset" value="초기화">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

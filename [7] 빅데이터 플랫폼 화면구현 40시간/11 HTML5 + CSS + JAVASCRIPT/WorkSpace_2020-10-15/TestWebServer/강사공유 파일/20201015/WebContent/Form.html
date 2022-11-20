@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가입</title>
+<script src="jquery-3.5.1.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#Register").click(function(){
+			// userId
+			// if($("#userId").val() == ""){
+			// 	$("#userId").css("background-color", "red");
+			// } else {
+			// 	$("#userId").css("background-color", "white");
+			// }
+			// job
+			// if($("#job").val() == ""){
+			// 	alert("직업을 선택해주세요.");
+			// }
+			alert($("input[name='gender']").length);
+			alert($("input[name='gender']:checked").length);
+			alert($("input[name='hobby']").length);
+			alert($("input[name='hobby']:checked").length);
+
+		});
+	});	
+</script>
+</head>
+<body>
+	<form>
+	<table border="1">
+		<tr>
+			<td>아이디</td><td><input type="text" id="userId"></td>			
+		</tr>
+		<tr>
+			<td>암호</td><td><input type="password" id="userPwd"></td>			
+		</tr>
+		<tr>
+			<td>성별</td><td><input type="radio" name="gender" value="male">남
+			<input type="radio" name="gender" value="female">여</td>			
+		</tr>
+		<tr>
+			<td>직업</td><td><select id="job">
+				<option value="">선택해주세요.</option>
+				<option value="1">회사원</option>
+				<option value="2">학생</option>
+			</select></td>			
+		</tr>
+		<tr>
+			<td>취미</td><td><input type="checkbox" name="hobby" value="soccer">축구
+			<input type="checkbox" name="hobby" value="basketball">농구
+			<input type="checkbox" name="hobby" value="baseball">야구</td>			
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="button" value="등록" id="Register"><input type="reset" value="초기화">
+			</td>
+		</tr>
+	</table>
+	</form>
+</body>
+</html>
+
+

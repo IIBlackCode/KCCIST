@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+* {	border: 1px solid black;}
+div {
+	background-color: yellow;
+	border:15px solid navy;
+	margin: 25px;
+	padding:25px;
+	width: 200px;
+	
+}
+</style>
+
+</head>
+<body>
+	<div class="menu1">짜장면</div>
+	
+	<hr>
+	
+	
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>테그에 스타일시트 적용하기</title>
+	<style type="text/css">
+	
+		p {
+			background-color: red;
+		}
+		h1 {
+			background-color: blue;
+		}
+		
+		.h1class {
+			background-color: black;
+			color: white;
+		}
+	
+	</style>
+</head>
+<body>
+	<p>안녕하세요.</p>
+	<p>반갑습니다.</p>
+	<p>오늘은 화요일 입니다..</p>
+	<h1>안녕하세요</h1>
+	<h1 class="h1class">클래스에 적용하기</h1>
+	<h1 name="h1name">name에 적용하기</h1>
+</body>
+</html>

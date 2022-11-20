@@ -1,0 +1,22 @@
+
+public class test {
+	public static void main(String[] args) {
+		String test = "01234";
+		String test1 = test.substring(1, 2);
+		System.out.println(test1);
+		
+		test1.length()
+	}
+	
+	public String startOz(String str) {
+		String result = "";
+		  if (str.length() > 4) {
+			  result = str.substring(0,2);  
+		  }else if(str.length() == 4) {
+			  result = str.substring(1,2); 
+		  }else if(str.length() < 4){
+			  result= str.substring(0,1); 
+		  }
+		 return result;
+	}
+}

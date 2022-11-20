@@ -1,0 +1,17 @@
+@charset "UTF-8";
+* {	border: 1px solid black;}
+
+.box {
+	width: 80%;
+	height: 60%;
+}
+
+.header {
+}
+
+.contenr {
+}
+
+.footer {
+	
+}

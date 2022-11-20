@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- JQuery -->
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<script>
+
+	/*변수 선언*/
+	function checkForm() {
+		
+		console.log(document.getElementsById("userName").value)
+		
+		var getName = document.getElementsById("userName").value;
+		var getID = document.getElementsById("userId").value;
+		var getPW = document.getElementsById("userPw").value;
+		var getPW_Check = document.getElementsByName("userPwCheck").value;
+		var getEmail = document.getElementsByName("userEmail").value;
+		var getGender = document.getElementsByName("gender").value;
+		var getTel = document.getElementsByName("userTel").value;
+		var getBirth = document.getElementsByName("userBirth").value;
+		var getColor = document.getElementsByName("userColor").value;
+		var getInterest = document.getElementsByName("interests").value;
+		console.log()
+	}
+</script>
+
+</head>
+<style>
+* {	border: 1px solid black;}
+</style>
+
+
+<body>
+	<form method="get" action="memberJoinFormProcess.jsp">
+		<!-- <table border = 1> -->
+		<table>
+			<tr>	
+				<h1>회원가입</h1>
+			</tr>
+			<tr>
+				<td>이름 :</td>
+				<td colspan="2"><input type="text" name="userName" size="20" autofocus="autofocus"><small name="userName_Check"></small></td>
+			</tr>
+			<tr>
+				<td>ID :</td>
+				<td><input type="text" id="userId" size="30"></td>
+			</tr>
+			<tr>
+				<td>PW :</td>
+				<td><input type="password" name="userPw" size="20"></td>
+			</tr>
+			<tr>
+				<td>PW확인 :</td>
+				<td><input type="password" name="userPwCheck" size="20"></td>
+			</tr>
+			<tr>
+				<td>이메일 :</td>
+				<td><input type="text" name="userEmail" size="20"></td>
+			</tr>
+			<tr>
+				<td>성별 :</td>
+				<td>
+					<input type="radio" name="gender" value="male" checked>남자
+					<input type="radio" name="gender" value="female" >여자
+					<input type="radio" name="gender" value="other" checked>그외
+				</td>
+				
+			</tr>
+			<tr>
+				<td>전화번호 :</td>
+				<td><input type="text" name="userTel" size="20"></td>
+			</tr>
+			<tr>
+				<td>생일 :</td>
+				<td><input type="date" name="userBirth" size="20"></td>
+			</tr>
+			<tr>
+				<td>좋아하는 색깔 :</td>
+				<td><input type="color" name="userColor" size="20"></td>
+			</tr>
+			<tr>
+				<td>관심분야 :</td>
+				<td>
+					<input type="checkbox" name="interests" value="1">경제
+					<input type="checkbox" name="interests" value="2">IT
+					<input type="checkbox" name="interests" value="3">사회
+					<input type="checkbox" name="interests" value="4">과학
+					<input type="checkbox" name="interests" value="5">음악
+					<input type="checkbox" name="interests" value="5">미술
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td align="center">
+					<input type="submit" value="로그인" onclick="checkForm();">
+					<input type="button" value="TEST" onclick="checkForm();">
+					<input type="reset" value="취소">
+				</td>
+			</tr>
+			
+		</table>
+	</form>
+	
+</body>
+</html>

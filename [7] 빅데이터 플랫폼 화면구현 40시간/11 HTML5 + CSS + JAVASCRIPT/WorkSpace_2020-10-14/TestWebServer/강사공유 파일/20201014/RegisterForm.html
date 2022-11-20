@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>회원가입</title>
+    <style type="text/css">
+    body {
+	    font-family: '나눔고딕',NanumGothic,'돋움',Dotum,helvetica,sans-serif;
+	    font-size: 15px;
+	}	
+	#container {
+	    width: 940px;
+	    padding: 2px;
+	    margin: 0px auto;
+	}		
+	#content {
+	    width: 600px;
+	    margin-top: 10px;
+	    margin-bottom: 10px;
+	    float: left;
+	    border: 1px solid #555;
+	}	
+    </style>
+    <script type="text/javascript">
+        function CheckRegister() {
+            if (document.getElementById("UserId").value == "") {
+                //alert("아이디를 입력해주세요.");                
+                document.getElementById("Msg").innerText = "아이디를 입력해주세요.";
+                //document.getElementById("UserId").focus();
+                return false;
+            }
+            if (document.getElementById("UserPassword").value == "") {
+                alert("비밀번호를 입력해주세요.");
+                document.getElementById("UserPassword").focus();
+                return false;
+            }
+            if (document.getElementById("ReUserPassword").value == "") {
+                alert("비밀번호 확인을 입력해주세요.");
+                document.getElementById("ReUserPassword").focus();
+                return false;
+            }
+            if (document.getElementById("UserPassword").value != document.getElementById("ReUserPassword").value) {
+                alert("비밀번호와 비밀번호 확인 값이 일치하지 않습니다.");
+                document.getElementById("ReUserPassword").focus();
+                return false;
+            }
+            if (document.getElementById("BirthDay").value == "") {
+                alert("생년월일을 입력해주세요.");
+                document.getElementById("BirthDay").focus();
+                return false;
+            }
+            if (document.getElementById("tel0").selectedIndex == 0) {
+                alert("전화번호 국번을 선택해주세요.");
+                document.getElementById("tel0").focus();
+                return false;
+            }
+
+            if (document.getElementById("tel1").value == "") {
+                alert("첫번째 전화번호를 입력해주세요.");
+                document.getElementById("tel1").focus();
+                return false;
+            }
+            if (document.getElementById("tel2").value == "") {
+                alert("두번째 전화번호를 입력해주세요.");
+                document.getElementById("tel2").focus();
+                return false;
+            }
+            if (document.getElementById("Company").value == "") {
+                alert("회사명을 입력해주세요.");
+                document.getElementById("Company").focus();
+                return false;
+            }
+            if (document.getElementById("Position").value == "") {
+                alert("직책을 입력해주세요.");
+                document.getElementById("Position").focus();
+                return false;
+            }
+
+            var rdo_obj = document.getElementsByName("HasCar");
+            var rdo_leng = rdo_obj.length;
+            var rdo_checked = 0;
+            for (i = 0; i < rdo_leng; i++) {
+                if (rdo_obj[i].checked == true) {
+                    rdo_checked += 1;
+                }
+            }
+            if (rdo_checked == 0) {
+                alert("차량소유 유무를 선택해주세요.");
+                return;
+            }
+
+            var chk_obj = document.getElementsByName("Hobby");
+            var chk_leng = chk_obj.length;
+            var checked = 0;
+            for (i = 0; i < chk_leng; i++) {
+                if (chk_obj[i].checked == true) {
+                    checked += 1;
+                }
+            }
+            if (checked == 0) {
+                alert("취미를 선택해주세요.");
+                return;
+            }
+
+            alert("회원가입이 완료되었습니다.");
+        }
+
+    </script>
+</head>
+<body>
+    <div id="container">
+    	<div id="content">
+            <form name="RegForm" id="RegForm">
+                <table border="0" cellpadding="4" cellspacing="5">
+                    <tr>
+                        <td colspan="2">회원가입</td>
+                    </tr>
+                    <tr>
+                        <td>아이디(*)</td>
+                        <td><input type="text" id="UserId" name="UserId" size="10" maxlength="10" /></td>
+                    </tr>
+                    <tr>
+                        <td>비밀번호(*)</td>
+                        <td><input type="password" id="UserPassword" name="UserPassword" size="10" maxlength="10" /></td>
+                    </tr>
+                    <tr>
+                        <td>비밀번호확인(*)</td>
+                        <td><input type="password" id="ReUserPassword" name="ReUserPassword" size="10" maxlength="10" /></td>
+                    </tr>
+                    <tr>
+                        <td>생년월일(*)</td>
+                        <td><input type="password" id="BirthDay" name="BirthDay" size="10" /></td>
+                    </tr>
+                    <tr>
+                        <td>전화번호(*)</td>
+                        <td>
+                            <select id="tel0" name="tel0">
+                                <option value=""></option>
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                                <option value="017">017</option>
+                            </select> -
+                            <input type="text" id="tel1" name="tel1" size="10" /> -
+                            <input type="text" id="tel2" name="tel2" size="10" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>직업(*)</td>
+                        <td>
+                            회사 <input type="text" id="Company" name="Company" size="10" />
+                            직책 <input type="text" id="Position" name="Position" size="10" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>차량소유유무(*)</td>
+                        <td>
+                            유<input type="radio" name="HasCar" value="Yes" />
+                            무<input type="radio" name="HasCar" value="No" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>취미(*)</td>
+                        <td>
+                            복싱<input type="checkbox" name="Hobby" value="Boxing" />
+                            탁구<input type="checkbox" name="Hobby" value="PingPong" />
+                            축구<input type="checkbox" name="Hobby" value="Soccer" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="button" id="Register" name="Register" value="등록" onclick="CheckRegister();" /></td>
+                    </tr>
+                </table>
+                &nbsp;&nbsp;<span id="Msg"></span>
+            </form>
+		</div>
+    </div>
+</body>
+</html>

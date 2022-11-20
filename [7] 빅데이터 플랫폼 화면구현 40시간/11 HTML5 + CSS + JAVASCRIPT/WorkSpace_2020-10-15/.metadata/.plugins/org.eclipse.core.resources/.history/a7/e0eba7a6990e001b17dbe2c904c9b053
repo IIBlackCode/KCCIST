@@ -1,0 +1,8 @@
+
+public class test {
+	public static void main(String[] args) {
+		String test = "01234";
+		String test1 = test.substring(2, 2);
+		System.out.println(test1);
+	}
+}

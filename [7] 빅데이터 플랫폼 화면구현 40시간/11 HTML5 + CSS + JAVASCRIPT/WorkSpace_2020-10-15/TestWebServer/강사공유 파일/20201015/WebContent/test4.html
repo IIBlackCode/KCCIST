@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.5.1.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#btn").click(function(){
+			$("#msg").text("반갑습니다.");	
+		});	
+		$("#btn2").click(function(){
+			$("#msg").text("반갑습니다2.");	
+		});	
+		$("#btn3").click(function(){
+			if($("#testId").val() == "") {
+				alert("값을 입력해주세요.");
+			}
+		});	
+	});
+</script>
+</head>
+<body>
+	<p id="msg">안녕하세요.</p>
+	<button id="btn">눌러주세요.</button>
+	<button id="btn2">눌러주세요.2</button>
+	<input type="text" id="testId">
+	<button id="btn3">값가져오기</button>
+</body>
+</html>
+
+
+

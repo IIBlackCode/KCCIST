@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<ul>
+		<li><a href="/kccistc/2020_10_15/test01.html"></i>TEST 01</a></li>
+		<li><a href="/kccistc/2020_10_15/test02.html"></i>TEST 02</a></li>
+		<li><a href="/kccistc/2020_10_15/test03.html"></i>TEST 03</a></li>
+		<li><a href="/kccistc/2020_10_15/test04.html"></i>TEST 04</a></li>
+		<li><a href="/kccistc/2020_10_15/test05.html"></i>TEST 05</a></li>
+		<li><a href="/kccistc/2020_10_15/test06.html"></i>TEST 06</a></li>
+		<li><a href="/kccistc/2020_10_15/Form.html"></i>FORM</a></li>
+		<li><a href="/kccistc/2020_10_15/MISSION/memberJoinForm.html"></i>MISSION</a></li>
+		
+	</ul>
+		
+		
+</body>
+</html>

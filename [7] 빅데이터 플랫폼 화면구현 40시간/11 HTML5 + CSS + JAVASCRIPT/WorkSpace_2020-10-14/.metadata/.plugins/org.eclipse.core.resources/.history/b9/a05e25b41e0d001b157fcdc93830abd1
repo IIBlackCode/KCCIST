@@ -1,0 +1,16 @@
+@charset "UTF-8";
+* {	border: 1px solid black;}
+
+.box {
+	background-color:gray;
+}
+
+.header {
+}
+
+.contenr {
+}
+
+.footer {
+	
+}

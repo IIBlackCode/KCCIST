@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title>
+
+<!-- JavaScript -->
+<script>
+	alert("Test Message")
+</script>
+
+</head>
+<body>
+	<input type="button" value="Button" onclick="javascript:alert('You clicked this button')">
+	<p onclick="javascript:alert('You clicked this button')">This is P tag</p>
+	
+	<!-- Check the value -->
+	ID : <input type="text"><br/>
+	ID : <input type="button" value="Login"><br/>
+</body>
+</html>

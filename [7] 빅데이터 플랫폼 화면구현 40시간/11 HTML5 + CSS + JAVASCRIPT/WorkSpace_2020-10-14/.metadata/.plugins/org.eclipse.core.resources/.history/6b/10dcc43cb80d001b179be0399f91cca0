@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title>
+
+<!-- JavaScript -->
+<script>
+	alert("Test Message")
+</script>
+
+</head>
+<body>
+	<input type="button" value="Click it" onclick="javascript:alert('You are click this button')">
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	var emp = {name : '홍길동', age:20, job:'developer'};
+	
+	//Array
+	var emps = [
+					{name : '홍길동', age:20, job:'developer'},
+					{name : '홍길동', age:20, job:'developer'},
+					{name : '홍길동', age:20, job:'developer'}
+				];
+	
+	function Test() {
+		document.getElementById("userId").value = "홍길동";
+	}
+</script>
+
+	<input type="text" id="userId"><br/>
+	<input type="text" id="userId2"><br/>
+	
+	<p></p>
+	
+	<input type="button" value="입력" onclick="Test();"><br/>
+	
+
+</body>
+</html>

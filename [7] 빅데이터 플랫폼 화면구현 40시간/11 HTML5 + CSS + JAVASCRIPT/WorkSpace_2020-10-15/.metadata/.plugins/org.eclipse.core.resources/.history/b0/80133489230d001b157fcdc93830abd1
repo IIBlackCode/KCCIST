@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="img_container">
+		<div id="img1"><img src="/image/cat1.jpg"></div>
+		<div id="img2"><img src="/image/cat2.jpg"></div>
+		<div id="img3"><img src="/image/cat3.jpg"></div>
+	</div>
+</body>
+</html>

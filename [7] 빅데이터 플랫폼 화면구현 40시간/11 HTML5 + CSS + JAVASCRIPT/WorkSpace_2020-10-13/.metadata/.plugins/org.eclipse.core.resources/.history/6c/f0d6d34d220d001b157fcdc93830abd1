@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link type="text/css" rel="stylesheet" href="mission.css"/>
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+			<h1>골목식당</h1>
+		</div>
+		<div class="content">
+			<div class="nav"> nav
+				<div>회사소개</div>
+				<div>CEO 인사말</div>
+				<div>오시는곳</div>
+				<div>연락처</div>
+			</div>
+			<div class="section">
+				<div>
+				</div id="title">
+					title
+				<div id="content">
+					content
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			footer
+		</div>
+	</div>
+</body>
+</html>

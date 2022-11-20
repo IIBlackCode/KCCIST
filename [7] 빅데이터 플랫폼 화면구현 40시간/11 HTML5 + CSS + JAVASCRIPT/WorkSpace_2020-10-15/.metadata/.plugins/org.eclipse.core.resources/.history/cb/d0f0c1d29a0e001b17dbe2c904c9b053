@@ -1,0 +1,18 @@
+
+public class test {
+	public static void main(String[] args) {
+		startOz();
+	}
+
+	public String startOz(String str) {
+		String result = "";
+		if (str.length() > 4) {
+			result = str.substring(0, 2);
+		} else if (str.length() == 4) {
+			result = str.substring(1, 2);
+		} else if (str.length() < 4) {
+			result = str.substring(0, 1);
+		}
+		return result;
+	}
+}

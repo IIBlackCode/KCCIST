@@ -1,0 +1,4 @@
+browser-choice=1
+browsers=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<web-browsers current\="2">\r\n<system/>\r\n<external location\="C\:\\Program Files\\Internet Explorer\\iexplore.exe" name\="Internet Explorer"/>\r\n<external location\="C\:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" name\="Chrome"/>\r\n</web-browsers>
+eclipse.preferences.version=1
+internalWebBrowserHistory=http\://localhost/kccistc/2020_10_13/main.html|*|http\://localhost/kccistc/2020_10_13/test01.html|*|http\://localhost/kccistc/main.html|*|http\://localhost/kccistc/2020_10_12/main.html|*|http\://localhost/main.html|*|http\://localhost/CHAPTER/main.html|*|http\://localhost/kccistc/2020_10_12/MISSION/memberJoinForm.html|*|http\://localhost/|*|http\://localhost/TestWebServer/|*|

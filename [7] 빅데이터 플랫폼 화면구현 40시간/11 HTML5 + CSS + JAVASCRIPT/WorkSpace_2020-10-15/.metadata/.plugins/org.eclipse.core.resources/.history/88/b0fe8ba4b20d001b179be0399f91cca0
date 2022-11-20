@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>수업</h1>
+	<ul>
+		<li><a href="/kccistc/2020_10_12/main.html"></i><h5>2020년 10월 12일 수업</h5></a></li>
+		<li><a href="/kccistc/2020_10_13/main.html"></i><h5>2020년 10월 13일 수업</h5></a></li>
+		
+	</ul>
+		
+</body>
+</html>

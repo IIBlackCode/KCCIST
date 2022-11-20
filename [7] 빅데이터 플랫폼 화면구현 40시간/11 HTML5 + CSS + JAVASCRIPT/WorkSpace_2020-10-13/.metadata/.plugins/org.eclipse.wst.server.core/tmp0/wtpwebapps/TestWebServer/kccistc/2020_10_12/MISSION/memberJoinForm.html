@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+* {	border: 1px solid black;}
+</style>
+<body>
+	<form method="get" action="memberJoinFormProcess.jsp">
+		<!-- <table border = 1> -->
+		<table>
+			<tr>	
+				<h1>회원가입</h1>
+			</tr>
+			<tr>
+				<td>이름 :</td>
+				<td colspan="3"><input type="text" name="userName" size="20" autofocus="autofocus"></td>
+			</tr>
+			<tr>
+				<td>ID :</td>
+				<td><input type="text" name="userId" size="30"></td>
+			</tr>
+			<tr>
+				<td>PW :</td>
+				<td><input type="password" name="userPw" size="20"></td>
+			</tr>
+			<tr>
+				<td>PW확인 :</td>
+				<td><input type="password" name="userPwCheck" size="20"></td>
+			</tr>
+			<tr>
+				<td>이메일 :</td>
+				<td><input type="text" name="userEmail" size="20"></td>
+			</tr>
+			<tr>
+				<td>성별 :</td>
+				<td>
+					<input type="radio" name="gender" value="male" checked>남자
+					<input type="radio" name="gender" value="female" >여자
+					<input type="radio" name="gender" value="other" checked>그외
+				</td>
+				
+			</tr>
+			<tr>
+				<td>전화번호 :</td>
+				<td><input type="text" name="userTel" size="20"></td>
+			</tr>
+			<tr>
+				<td>생일 :</td>
+				<td><input type="date" name="userBirth" size="20"></td>
+			</tr>
+			<tr>
+				<td>좋아하는 색깔 :</td>
+				<td><input type="color" name="userColor" size="20"></td>
+			</tr>
+			<tr>
+				<td>관심분야 :</td>
+				<td>
+					<input type="checkbox" name="interests" value="1">경제
+					<input type="checkbox" name="interests" value="2">IT
+					<input type="checkbox" name="interests" value="3">사회
+					<input type="checkbox" name="interests" value="4">과학
+					<input type="checkbox" name="interests" value="5">음악
+					<input type="checkbox" name="interests" value="5">미술
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td align="center">
+					<input type="submit" value="로그인">
+					<input type="reset" value="취소">
+				</td>
+			</tr>
+			
+		</table>
+	</form>
+	
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- JQuery -->
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+	
+	/*변수 선언*/
+	function checkForm() {
+		
+		/* console.log(document.getElementsByName("userName")[0].value) */
+		var Check = [];
+		for (var i = 0; i < document.getElementsByName("joinForm").length; i++) {
+			console.log("[",i,"]",document.getElementsByName("joinForm")[i].value);
+		}
+		
+		/*0. Name Check*/
+		if (document.getElementsByName("joinForm")[0].value==""||document.getElementsByName("joinForm")[0].value==null) {
+			$('#name_check').css('color','red').html("You have to insert your name.");
+			document.getElementsByName("joinForm")[0].focus();
+			Check[0] = false;
+		}else if(!(document.getElementsByName("joinForm")[0].value==""||document.getElementsByName("joinForm")[0].value==null)){
+			$('#name_check').css('color','green').html("Check it!.");
+			Check[0] = true;
+		}
+		
+		
+		/*1. Id Check*/
+		if (document.getElementsByName("joinForm")[1].value==""||document.getElementsByName("joinForm")[1].value==null) {
+			$('#id_check').css('color','red').html("Please Insert Your Id.");
+			document.getElementsByName("joinForm")[1].focus();
+			Check[1] = false;
+		}else if(!(document.getElementsByName("joinForm")[1].value==""||document.getElementsByName("joinForm")[1].value==null)) {
+			$('#id_check').css('color','green').html("Check it!.");
+			Check[1] = true;
+		}
+		
+		/*2. PW Check pw_check*/
+		//(1). 비밀번호 null값 체크
+		if (document.getElementsByName("joinForm")[2].value==""||document.getElementsByName("joinForm")[2].value==null) {
+			$('#pw_check').css('color','red').html("Please Insert Your Password.");
+			document.getElementsByName("joinForm")[2].focus();
+			Check[2] = false;
+		}else if(!(document.getElementsByName("joinForm")[2].value==""||document.getElementsByName("joinForm")[2].value==null)) {
+			//(2). 비밀번호 일치 체크
+			if(document.getElementsByName("joinForm")[2].value != document.getElementsByName("joinForm")[3].value) {
+				$('#pw_check').css('color','red').html("Password is not matched");
+				document.getElementsByName("joinForm")[2].focus();
+				Check[2] = false;
+			}else{
+				$('#pw_check').css('color','green').html("Check it!.");
+				Check[2] = true;
+			}
+		}
+
+		/*3. E_mail Check*/
+		if (document.getElementsByName("joinForm")[4].value==""||document.getElementsByName("joinForm")[4].value==null) {
+			$('#email_check').css('color','red').html("Please Insert Your E-mail.");
+			document.getElementsByName("joinForm")[4].focus();
+			Check[3] = false;
+		}else if(!(document.getElementsByName("joinForm")[4].value==""||document.getElementsByName("joinForm")[4].value==null)) {
+			$('#email_check').css('color','green').html("Check it!.");
+			Check[3] = true;
+		}
+
+		/*4. Tel Check*/
+		if (document.getElementsByName("joinForm")[5].value==""||document.getElementsByName("joinForm")[5].value==null) {
+			$('#tel_check').css('color','red').html("Please Insert Your Tel-Number.");
+			document.getElementsByName("joinForm")[5].focus();
+			Check[4] = false;
+		}else if(!(document.getElementsByName("joinForm")[5].value==""||document.getElementsByName("joinForm")[5].value==null)) {
+			$('#tel_check').css('color','green').html("Check it!.");
+			Check[4] = true;
+		}
+		count =0;
+		for(i=0;i<Check.length;i++){
+			if (Check[i] == false) {
+				count++
+			}
+		}
+		if (count > 0 ) {
+			alert("Please Check it your write");
+		}
+		
+	}
+</script>
+
+</head>
+<style>
+/* * {	border: 1px solid black;} */
+</style>
+
+
+<body>
+	<form method="get" action="memberJoinFormProcess.jsp">
+		<!-- <table border = 1> -->
+		<table>
+			<tr>	
+				<h1>회원가입</h1>
+			</tr>
+			<tr>
+				<td>이름 :</td>
+				<td colspan="2">
+					<input type="text" name="joinForm" id="userName" size="20" autofocus="autofocus">
+					<div><small style="color: red" id="name_check"></small></div>
+				</td>
+			</tr>
+			<tr>
+				<td>ID :</td>
+				<td>
+					<input type="text" name="joinForm" size="20">
+					<div><small style="color: red" id="id_check"></small></div>
+			</tr>
+			<tr>
+				<td>PW :</td>
+				<td>
+					<input type="password" name="joinForm" size="20"><input type="password" name="joinForm" size="20">
+					<div><small style="color: red" id="pw_check"></small></div>
+				</td>
+			</tr>
+			<tr>
+				<td>이메일 :</td>
+				<td>
+					<input type="text" name="joinForm" size="20">
+					<div><small style="color: red" id="email_check"></small></div>
+				</td>
+			</tr>
+			<tr>
+				<td>성별 :</td>
+				<td>
+					<input type="radio" id="gender" value="male" checked>남자
+					<input type="radio" id="gender" value="female" >여자
+					<input type="radio" id="gender" value="other" >그외
+				</td>
+				
+			</tr>
+			<tr>
+				<td>전화번호 :</td>
+				<td>
+					<input type="text" name="joinForm" size="20">
+					<div><small style="color: red" id="tel_check"></small></div>
+				</td>
+			</tr>
+			<tr>
+				<td>생일 :</td>
+				<td><input type="date" name="joinForm" size="20"></td>
+			</tr>
+			<tr>
+				<td>좋아하는 색 :</td>
+				<td><input type="color" name="joinForm" size="20"></td>
+			</tr>
+			<tr>
+				<td>관심분야 :</td>
+				<td>
+					<input type="checkbox" id="interests" value="1">경제
+					<input type="checkbox" id="interests" value="2">IT
+					<input type="checkbox" id="interests" value="3">사회
+					<input type="checkbox" id="interests" value="4">과학
+					<input type="checkbox" id="interests" value="5">음악
+					<input type="checkbox" id="interests" value="5">미술
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td align="center">
+					<input type="submit" value="로그인" onclick="checkForm();">
+					<input type="button" value="TEST" onclick="checkForm();">
+					<input type="reset" value="취소">
+				</td>
+			</tr>
+			
+		</table>
+	</form>
+	
+</body>
+</html>

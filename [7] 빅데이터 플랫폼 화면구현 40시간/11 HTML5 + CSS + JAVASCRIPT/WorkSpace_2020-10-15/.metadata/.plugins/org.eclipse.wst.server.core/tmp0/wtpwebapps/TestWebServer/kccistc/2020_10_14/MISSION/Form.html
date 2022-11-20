@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가입</title>
+<script>
+function CheckForm() {
+	if(document.getElementById("userId").value == "") {
+		alert("아이디 입력주세요.");
+		document.getElementById("userId").focus();
+	}
+	if(document.getElementById("userPwd").value == "") {
+		alert("암호를 입력주세요.");
+		document.getElementById("userPwd").focus();
+		return false;
+	}	
+	var rdo_gender = document.getElementsByName("gender");
+	var count = 0;
+	for(i = 0; i < rdo_gender.length; i++){
+		if (rdo_gender[i].checked == true){
+			count+= 1;				
+		}
+	}	
+	if(document.getElementById("job").selectedIndex == 0){
+		alert("직업을 선택해주세요.");
+		document.getElementById("job").focus();
+		return false;
+	}
+}
+</script>
+</head>
+<body>
+	<form>
+	<table border="1">
+		<tr>
+			<td>아이디</td><td><input type="text" id="userId"></td>			
+		</tr>
+		<tr>
+			<td>암호</td><td><input type="password" id="userPwd"></td>			
+		</tr>
+		<tr>
+			<td>성별</td><td><input type="radio" name="gender" value="male">남
+			<input type="radio" name="gender" value="female">여</td>			
+		</tr>
+		<tr>
+			<td>직업</td><td><select id="job">
+				<option value="">선택해주세요.</option>
+				<option value="1">회사원</option>
+				<option value="2">학생</option>
+			</select></td>			
+		</tr>
+		<tr>
+			<td>취미</td><td><input type="checkbox" name="hobby" value="soccer">축구
+			<input type="checkbox" name="hobby" value="basketball">농구
+			<input type="checkbox" name="hobby" value="baseball">야구</td>			
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="button" value="등록" onclick="CheckForm();"><input type="reset" value="초기화">
+			</td>
+		</tr>
+	</table>
+	</form>
+</body>
+</html>
+
+

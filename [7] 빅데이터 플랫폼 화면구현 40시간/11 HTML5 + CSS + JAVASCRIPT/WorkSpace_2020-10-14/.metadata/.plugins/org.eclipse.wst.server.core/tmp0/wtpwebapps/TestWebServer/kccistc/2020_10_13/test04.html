@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>테그에 스타일시트 적용하기</title>
+	<style type="text/css">
+	
+		p {
+			background-color: red;
+		}
+		h1 {
+			background-color: blue;
+		}
+		
+		.h1class {
+			background-color: black;
+			color: white;
+		}
+		
+		#h1nameImport {
+			background-color: black !important;
+			color: white !important;
+		}
+		
+		#h2name {
+			background-color: black;
+			color: white;
+		}
+	
+	</style>
+</head>
+<body>
+	<p>안녕하세요.</p>
+	<p>반갑습니다.</p>
+	<p>오늘은 화요일 입니다..</p>
+	<h1>h1테그에 스타일시트 적용</h1>
+	<h1 class="h1class">클래스에 적용하기</h1>
+	<h1 id="h1name">name에 적용하기[테그 우선적용]</h1>
+	<h1 id="h1nameImport">name에 적용하기[강제적용]</h1>
+	<h2 id="h2name">name에 적용하기</h2>
+</body>
+</html>

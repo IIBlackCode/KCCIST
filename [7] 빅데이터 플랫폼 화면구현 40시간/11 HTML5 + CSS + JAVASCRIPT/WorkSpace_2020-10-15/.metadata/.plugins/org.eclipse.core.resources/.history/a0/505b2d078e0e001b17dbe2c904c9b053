@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	function createButton() {
+		
+		var btn = document.createElement("button");
+		document.body.appendChild(btn)
+		
+	}
+</script>
+
+	<input type="text" id="userId"><br/>
+	<input type="text" id="userId2"><br/>
+	
+	<p></p>
+	
+	<input type="button" value="입력" onclick="Test();"><br/>
+	
+
+</body>
+</html>

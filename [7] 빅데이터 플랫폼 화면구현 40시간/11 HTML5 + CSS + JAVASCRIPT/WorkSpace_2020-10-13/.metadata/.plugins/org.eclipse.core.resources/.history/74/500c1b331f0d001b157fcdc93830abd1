@@ -1,0 +1,18 @@
+@charset "UTF-8";
+* {	border: 1px solid black;}
+
+.box {
+	background-color:gray;
+	width: 800px;
+}
+
+.header {
+}
+
+/*Content*/
+.content {
+}
+
+.footer {
+	
+}

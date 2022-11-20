@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<script src="/jquery-3.5.1.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$("button.add").click(function () {
+			$("h1,h2,p").addClss("blue");
+			$("div").addClss("important");
+		})
+		$("button.remove").click(function () {
+			$("h1,h2,p").removeClss("blue");
+			$("div").removeClss("important");
+		})
+	});//The end of document.ready
+</script>
+
+<style type="text/css">
+.important {
+	font-weight : board;
+	font-size : xx-large;
+}
+.blue {
+	color: blue;
+}
+</style>
+
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>HTML</h1>
+	<h2>CSS</h2>
+	<p>JavaScript</p>
+	<div>jQuerry</div>
+	<button class="add">CSS 적용</button>
+	<button class="remove">CSS 적용 해제</button>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title>
+
+<!-- JavaScript -->
+<script>
+	alert("Test Message")
+	function checkLogin() {
+		alert("test")
+		console.log("function checkLogin(This is test Message)"+document.getElementById("userID").value);
+		(document.getElementById("userID").value)
+	}
+</script>
+
+</head>
+<body>
+	<input type="button" value="Button" onclick="javascript:alert('You clicked this button')">
+	<p onclick="javascript:alert('You clicked this button')">This is P tag</p>
+	
+	<hr>
+	
+	<!-- Check the value -->
+	ID : <input type="text" id=userID><br/>
+	ID : <input type="button" value="Login" onclick="checkLogin();"><br/>
+</body>
+</html>

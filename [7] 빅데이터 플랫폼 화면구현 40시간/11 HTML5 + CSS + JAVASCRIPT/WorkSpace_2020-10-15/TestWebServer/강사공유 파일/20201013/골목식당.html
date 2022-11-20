@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.header, .footer {
+  background-color: grey;
+  color: white;
+  padding: 15px;
+}
+
+.column {
+  float: left;
+  padding: 15px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.menu {
+  width: 25%;
+}
+
+.content {
+  width: 75%;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: #33b5e5;
+  color: #ffffff;
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>골목식당</h1>
+</div>
+
+<div class="clearfix">
+  <div class="column menu">
+    <ul>
+      <li>회사소개</li>
+      <li>CEO 인사말</li>
+      <li>오시는곳</li>
+      <li>연락처</li>
+    </ul>
+  </div>
+
+  <div class="column content">
+    <h1>회사소개</h1>
+    <p>안녕하세요~골목식당입니다!.</p>
+    <p>회사일이 끝나고 저녁식사를 하러 가본 곳은 맛있는 쭈구미를 먹을수 있는 <골목식당>이라는 곳입니다. 이름이 익숙해서 골식이라고 해도 됩니다. 항상 열심히 음식을 만들려고 노력중입니다. 최선을 다하겠습니다. 많이들 와주세요. 감사합니다.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>(주)골목식당. 전화번호: 000-0000 </p>
+</div>
+
+</body>
+</html>

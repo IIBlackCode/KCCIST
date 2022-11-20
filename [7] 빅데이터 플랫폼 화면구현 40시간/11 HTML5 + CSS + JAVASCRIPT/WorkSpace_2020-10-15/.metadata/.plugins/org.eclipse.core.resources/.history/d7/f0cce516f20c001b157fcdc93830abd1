@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>	
+	div와 span을 따로 사용했을 때 효과없다.
+	<div>test</div>
+	<span>test2</span>
+	
+	<hr>
+	
+	<div>test</div>
+	<span>test2</span>
+	<p>
+	<div>test3</div>
+	<span>test4</span>
+	
+	
+</body>
+</html>

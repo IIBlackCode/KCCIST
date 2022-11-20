@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가입</title>
+
+<script>
+	function CheckForm() {
+		
+		if (document.getElementById("userID").value =="" || document.getElementById("userID").value ==null) {
+			alert("Please input id");
+			//아이디 미입력 후 아이디칸에 focus
+			document.getElementById("userID").focus();
+		}// The end of if
+		
+	}
+</script>
+
+</head>
+<body>
+	<form>
+		<table border = "1">
+			<tr>
+				<td>아이디</td>
+				<td><input type="text" id="userID"></td>
+			</tr>
+			<tr>
+				<td>암  호</td>
+				<td><input type="password" id="userPW"></td>
+			</tr>
+			<tr>
+				<td>성  별</td>
+				<td>
+					<input type="radio" name="gender" value="male">남
+					<input type="radio" name="gender" value="female">여
+				</td>
+			</tr>
+			<tr>
+				<td>직  업</td>
+				<td>
+					<select name="job">
+					<option value="">선택해주세요</option>
+					<option value="1">회사원</option>
+					<option value="2">학생</option>
+				</td>
+			</tr>
+			<tr>
+				<td>취  미</td>
+				<td>
+					<input type="checkbox" name="hobby" value="scooer">축구
+					<input type="checkbox" name="hobby" value="basketball">농구
+					<input type="checkbox" name="hobby" value="baseball">야구
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" value="등록" onclick="CheckForm();">
+					<input type="reset" value="초기화">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

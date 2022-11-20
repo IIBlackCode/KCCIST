@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border = "1">
+		<tr>
+			<td>아이디</td>
+			<td><input type="text" id="userID"></td>
+		</tr>
+		<tr>
+			<td>암  호</td>
+			<td><input type="password" id="userPW"></td>
+		</tr>
+		<tr>
+			<td>성  별</td>
+			<td>
+				<input type="radio" name="gender" value="male">남
+				<input type="radio" name="gender" value="female">여
+			</td>
+		</tr>
+		<tr>
+			<td>직  업</td>
+			<td>
+				<select name="job">
+				<option value="">선택해주세요</option>
+				<option value="1">회사원</option>
+				<option value="2">학생</option>
+			</td>
+		</tr>
+		<tr>
+			<td>취  미</td>
+			<td><input></td>
+		</tr>
+		
+		
+	</table>
+</body>
+</html>

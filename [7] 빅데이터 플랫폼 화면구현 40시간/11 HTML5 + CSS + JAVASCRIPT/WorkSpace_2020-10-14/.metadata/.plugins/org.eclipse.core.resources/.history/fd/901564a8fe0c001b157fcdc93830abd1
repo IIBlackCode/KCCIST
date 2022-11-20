@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+* {
+	/* border: 1px solid black; */
+	border: 1px  ;
+	border: 1px solid black;
+}
+
+p {
+	color: green;
+	background-color: yellow;
+}
+
+div {
+	background-color: gray;
+	width: 400px;
+}

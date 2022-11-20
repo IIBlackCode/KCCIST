@@ -1,0 +1,5 @@
+
+10월 13, 2020 09:34:51.94 NEW SESSION
+10월 13, 2020 09:34:51.94 [3304:6856:1013/093451.936:ERROR:device_event_log_impl.cc(208)] [09:34:51.936] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+10월 13, 2020 10:31:05.35 [3304:6856:1013/103105.359:ERROR:CONSOLE(1555)] "No document", source: devtools://devtools/bundled/sdk/sdk.js (1555)
+10월 13, 2020 11:41:45.58 [12452:7120:1013/114145.583:ERROR:device_event_log_impl.cc(208)] [11:41:45.583] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.

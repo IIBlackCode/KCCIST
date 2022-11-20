@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- JQuery -->
+<script type="text/javascript"
+	src="/jquery-3.5.1.min.js"></script>
+
+<script>
+	$(document).ready(function () {
+		console.log("$(document).ready(function ()");
+		//p tag가 클릭됐을 때
+		$("p").click(function () {
+			console.log("TEST");
+			$(this).hide();
+		}); 
+	});
+</script>
+
+</head>
+<body>
+	
+	<input type="button" value="Click" >
+	<p>안녕하세요</p>
+	<p>방가워요</p>
+	
+	
+</body>
+</html>

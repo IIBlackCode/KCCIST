@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script블럭 여러번 사용하기</title>
+
+<!-- 
+	script의 src 속성에 test.js로 지정하면 지정한곳에서 script를 사용
+ -->
+<script type="text/javascript">
+
+	var x = 10;
+	var y = 1234;
+	var z = x+y;
+	
+	document.write(z);
+	function test() {
+		var a = 100;	
+		alert(a);
+	}
+	
+</script>
+
+<!-- 스크립트 블럭은 여러번 사용이 가능 -->
+<script>
+	document.write(z);
+	test();
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

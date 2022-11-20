@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- JQuery -->
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<script>
+	
+	$(document).ready(function() {
+
+		$("#Register").click(function () {
+			
+			if ( $("userid").val()=="" ) {
+
+				$("#userid").css("background-color",red);
+				
+			}
+
+		});
+
+	});
+
+</script>
+
+</head>
+<style>
+* {	border: 1px solid black;}
+</style>
+
+
+<body>
+	<form method="get" action="memberJoinFormProcess.jsp">
+		<!-- <table border = 1> -->
+		<table>
+			<tr>	
+				<h1>회원가입</h1>
+			</tr>
+			<tr>
+				<td>이름 :</td>
+				<td colspan="2">
+					<input type="text" name="joinForm" id="userName" size="20" autofocus="autofocus">
+					<div><small style="color: red" id="name_check"></small></div>
+				</td>
+			</tr>
+			<tr>
+				<td>ID :</td>
+				<td>
+					<input type="text" name="joinForm" size="20">
+					<div><small style="color: red" id="id_check"></small></div>
+			</tr>
+			<tr>
+				<td>PW :</td>
+				<td><input type="password" name="joinForm" size="20"> <br/><input type="password" name="joinForm" size="20"></td>
+			</tr>
+			<tr>
+				<td>PW확인 :</td>
+				<td><input type="password" name="joinForm" size="20"></td>
+			</tr>
+			<tr>
+				<td>이메일 :</td>
+				<td><input type="text" name="joinForm" size="20"></td>
+			</tr>
+			<tr>
+				<td>성별 :</td>
+				<td>
+					<input type="radio" id="gender" value="male" checked>남자
+					<input type="radio" id="gender" value="female" >여자
+					<input type="radio" id="gender" value="other" >그외
+				</td>
+				
+			</tr>
+			<tr>
+				<td>전화번호 :</td>
+				<td><input type="text" name="joinForm" size="20"></td>
+			</tr>
+			<tr>
+				<td>생일 :</td>
+				<td><input type="date" name="joinForm" size="20"></td>
+			</tr>
+			<tr>
+				<td>좋아하는 색깔 :</td>
+				<td><input type="color" name="joinForm" size="20"></td>
+			</tr>
+			<tr>
+				<td>관심분야 :</td>
+				<td>
+					<input type="checkbox" id="interests" value="1">경제
+					<input type="checkbox" id="interests" value="2">IT
+					<input type="checkbox" id="interests" value="3">사회
+					<input type="checkbox" id="interests" value="4">과학
+					<input type="checkbox" id="interests" value="5">음악
+					<input type="checkbox" id="interests" value="5">미술
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td align="center">
+					<input type="submit" value="로그인" onclick="checkForm();">
+					<input type="button" value="TEST" onclick="checkForm();">
+					<input type="reset" value="취소">
+				</td>
+			</tr>
+			
+		</table>
+	</form>
+	
+</body>
+</html>

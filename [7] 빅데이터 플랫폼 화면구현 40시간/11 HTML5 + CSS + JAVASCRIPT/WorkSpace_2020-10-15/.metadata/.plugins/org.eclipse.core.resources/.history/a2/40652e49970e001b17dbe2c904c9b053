@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- JQuery -->
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function () {
+		$("p").click(function () {
+		//p tag가 클릭됐을 때
+			$(this).hide();
+		}) 
+		
+	});
+</script>
+
+</head>
+<body>
+	
+	<input type="button" value="Click" onclick="">
+	<p>안녕하세요</p>
+	<p>방가워요</p>
+	
+	
+</body>
+</html>

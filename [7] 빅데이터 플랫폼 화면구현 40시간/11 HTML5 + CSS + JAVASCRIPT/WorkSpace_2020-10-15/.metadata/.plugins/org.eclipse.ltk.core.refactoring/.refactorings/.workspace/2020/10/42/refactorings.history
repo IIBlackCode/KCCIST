@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 0 elements to &apos;2020_10_14&apos;&#x0D;&#x0A;- Destination element: &apos;2020_10_14&apos;" description="Copy compilation units" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1602662533622" target="/TestWebServer/WebContent/kccistc/2020_10_14" units="0" version="1.0"/>
+</session>

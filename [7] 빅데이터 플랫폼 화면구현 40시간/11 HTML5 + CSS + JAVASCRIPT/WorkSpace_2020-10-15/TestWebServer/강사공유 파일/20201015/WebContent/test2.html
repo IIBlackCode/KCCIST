@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function createButton() {
+	var btn = document.createElement("button");
+	btn.innerHTML = "버튼";
+	document.body.appendChild(btn);
+	var btn2 = document.createElement("input");
+	btn2.type= "text";
+	btn2.value = "버튼2";
+	btn2.style.color = "red";
+	document.body.appendChild(btn2);
+}
+</script>
+</head>
+<body>
+<button onclick="createButton();">눌러주세요</button>
+
+</body>
+</html>

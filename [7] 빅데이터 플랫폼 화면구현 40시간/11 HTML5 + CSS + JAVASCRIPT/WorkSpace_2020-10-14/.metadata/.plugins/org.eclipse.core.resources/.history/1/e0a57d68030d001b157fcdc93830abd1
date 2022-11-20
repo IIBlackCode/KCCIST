@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+	.menu1 {
+		background-color: blue;
+	}
+	.menu2 {
+		background-color: yellow;
+	}
+	
+</style>
+
+</head>
+<body>
+	<div class="menu1">짜장면</div>
+	<div class="menu2">짬  뽕</div>
+</body>
+</html>

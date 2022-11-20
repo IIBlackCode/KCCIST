@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+* {	border: 1px solid black;}
+
+#main {
+}
+</style>
+
+</head>
+<body>
+	<div id="main">
+		<div id="header">header</div>
+		
+		<div id="left menu">left menu</div>
+		
+		<div id="content">content</div>
+		
+		<div id="right menu">right menu</div>
+		
+		<div id="footer">footer</div>
+	</div>
+	<div id=""></div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- JQuery -->
+<script type="text/javascript"
+	src="/jquery-3.5.1.min.js"></script>
+	
+<script>
+
+	$(document).ready(function() {
+
+		$("input").focus(function(){
+			$(this).css("background-color","blue");
+		})
+
+		$("input").focus(function(){
+			$(this).css("background-color","white");
+		})
+
+		$("check").focus(function(){
+			$(this).css("background-color","red");
+		})
+
+	});
+
+</script>
+
+</head>
+<body>
+	
+	아이디  : <input type="text" name="fullname"><br>
+	E- mail :  <input type="text" name="fullname"><br>
+	<button></button>
+	
+	
+</body>
+</html>

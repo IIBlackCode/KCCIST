@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script블럭 여러번 사용하기</title>
+
+<script type="text/javascript">
+
+	function add(a,b) {
+		return a+B;
+	}	
+	
+	var c = add(1,2)
+	
+</script>
+
+<!-- 스크립트 블럭은 여러번 사용이 가능 -->
+<script>
+	document.write(z);
+	test();
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	//alert("안녕하세요.");
+	function checkLogin(){
+		//alert("로그인 확인");
+		//alert(document.getElementById('userId').value);
+		var userId = document.getElementById('userId').value;
+		if(userId == "") {
+			alert("아이디를 입력해주세요.");
+		}  else {
+			alert("로그인 되었습니다.");
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="눌러주세요." onclick="javascript:alert('안녕하세요.');">
+	<p onclick="javascript:alert('방가워요.');">눌러주세요2.</p>
+	아이디 : <input type="text" id="userId"><br/>
+	<input type="button" value="로그인" onclick="checkLogin();">
+	
+</body>
+</html>

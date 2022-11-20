@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+
+	function test() {
+		alert("test");
+	}
+	
+	function createButton() {
+		
+		var btn = document.createElement("button");
+		btn.innerHTML = "BUTTON";
+		document.body.appendChild(btn);
+		
+		var btn2 = document.createElement("input");
+		btn2.type="button";
+		btn2.value="Button2"
+		btn2.style.color="red"
+		document.body.appendChild(btn2);
+		
+		
+	}
+</script>
+
+<button onclick="createButton();">Click it!</button>	
+
+</body>
+</html>

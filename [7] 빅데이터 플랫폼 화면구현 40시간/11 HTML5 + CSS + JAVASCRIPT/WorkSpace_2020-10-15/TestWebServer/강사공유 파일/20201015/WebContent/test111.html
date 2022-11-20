@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>회원가입</title>
+    <style type="text/css">
+    body {
+	    font-family: '나눔고딕',NanumGothic,'돋움',Dotum,helvetica,sans-serif;
+	    font-size: 15px;
+	}	
+	#container {
+	    width: 940px;
+	    padding: 2px;
+	    margin: 0px auto;
+	}		
+	#content {
+	    width: 600px;
+	    margin-top: 10px;
+	    margin-bottom: 10px;
+	    float: left;
+	    border: 1px solid #555;
+	}	
+    </style>
+	<script type="text/javascript" src="jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function(){
+			$("#Register").click(function(){
+								
+
+				
+			});
+		});
+    </script>
+</head>
+<body>
+    <div id="container">
+    	<div id="content">
+            <form name="RegForm" id="RegForm">
+                <table border="0" cellpadding="4" cellspacing="5">
+                    <tr>
+                        <td colspan="2">회원가입</td>
+                    </tr>
+                    <tr>
+                        <td>아이디(*)</td>
+                        <td><input type="text" id="UserId" name="UserId" size="10" maxlength="10" /></td>
+                    </tr>
+                    <tr>
+                        <td>비밀번호(*)</td>
+                        <td><input type="password" id="UserPassword" name="UserPassword" size="10" maxlength="10" /></td>
+                    </tr>
+                    <tr>
+                        <td>비밀번호확인(*)</td>
+                        <td><input type="password" id="ReUserPassword" name="ReUserPassword" size="10" maxlength="10" /></td>
+                    </tr>
+                    <tr>
+                        <td>생년월일(*)</td>
+                        <td><input type="password" id="BirthDay" name="BirthDay" size="10" /></td>
+                    </tr>
+                    <tr>
+                        <td>전화번호(*)</td>
+                        <td>
+                            <select id="tel0" name="tel0">
+                                <option value=""></option>
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                                <option value="017">017</option>
+                            </select> -
+                            <input type="text" id="tel1" name="tel1" size="10" /> -
+                            <input type="text" id="tel2" name="tel2" size="10" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>직업(*)</td>
+                        <td>
+                            회사 <input type="text" id="Company" name="Company" size="10" />
+                            직책 <input type="text" id="Position" name="Position" size="10" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>차량소유유무(*)</td>
+                        <td>
+                            유<input type="radio" name="HasCar" value="Yes" />
+                            무<input type="radio" name="HasCar" value="No" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>취미(*)</td>
+                        <td>
+                            복싱<input type="checkbox" name="Hobby" value="Boxing" />
+                            탁구<input type="checkbox" name="Hobby" value="PingPong" />
+                            축구<input type="checkbox" name="Hobby" value="Soccer" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="button" id="Register" name="Register" value="등록" Id="Register"/></td>
+                    </tr>
+                </table>
+                &nbsp;&nbsp;<span id="Msg"></span>
+            </form>
+		</div>
+    </div>
+</body>
+</html>

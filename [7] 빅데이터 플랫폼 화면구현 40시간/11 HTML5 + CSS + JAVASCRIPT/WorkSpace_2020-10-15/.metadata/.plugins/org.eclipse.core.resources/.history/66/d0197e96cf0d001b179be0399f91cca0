@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<script>
+
+	var com = [95,88,,72,68,,99,82,78,85];	//10명중 8명의 점수만 입력
+	var getAvg;
+	
+	function printAvg() {
+		var i, sum=0;getAvg
+		var n=com.length;
+		
+		document.write(n+"명의 점수 입력 <p/>");
+		
+		for(i=0;i<n;i++) {
+			
+			sum += com[i];
+		}
+		return (sum/n);
+	}
+	
+	getAvg = printAvg();
+	document.write("평균 :<b>"+getAvg + "</b><p/>")
+	
+</script>
+
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>
